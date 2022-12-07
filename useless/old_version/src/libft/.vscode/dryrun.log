@@ -1,0 +1,9 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/dracken24/Desktop/prog/libft'
+echo [35m"LA LIBFT SE COMPILE COMME UNE GRANDE...""\033[0m"
+echo '\n'[32m"LIBFT READY FOR NEXT !!!""\033[0m"
+make: Leaving directory '/home/dracken24/Desktop/prog/libft'
+ 
+make: *** No rule to make target 'str/ft_strchr_bool.c', needed by 'libft'.
+make: *** No rule to make target 'atoitoa/ft_atoi_base.c', needed by 'libft'.
+

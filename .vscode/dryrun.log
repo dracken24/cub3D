@@ -1,0 +1,761 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/cub_3D'
+make -C ./src/libft
+make[1]: Entering directory '/home/dracken24/Desktop/prog/42_en_cours/cub_3D/src/libft'
+ 
+echo [35m"LA LIBFT SE COMPILE COMME UNE GRANDE...""\033[0m"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c math/ft_ultimate_range.c -o objs/./math/ft_ultimate_range.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c math/ft_putnbr.c -o objs/./math/ft_putnbr.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c math/ft_range.c -o objs/./math/ft_range.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c math/ft_swap.c -o objs/./math/ft_swap.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c math/ft_rev_int_tab.c -o objs/./math/ft_rev_int_tab.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c math/ft_nbrlen.c -o objs/./math/ft_nbrlen.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c math/ft_putnbr_fd.c -o objs/./math/ft_putnbr_fd.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c math/ft_p_or_imp.c -o objs/./math/ft_p_or_imp.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c math/ft_array_len.c -o objs/./math/ft_array_len.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c mem_alloc/ft_bzero.c -o objs/./mem_alloc/ft_bzero.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c mem_alloc/ft_calloc.c -o objs/./mem_alloc/ft_calloc.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c mem_alloc/free_ptr.c -o objs/./mem_alloc/free_ptr.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c lst/ft_lstmap.c -o objs/./lst/ft_lstmap.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c lst/ft_lstiter.c -o objs/./lst/ft_lstiter.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c lst/ft_lstclear.c -o objs/./lst/ft_lstclear.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c lst/ft_lstdelone.c -o objs/./lst/ft_lstdelone.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c lst/ft_lstadd_back.c -o objs/./lst/ft_lstadd_back.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c lst/ft_lstlast.c -o objs/./lst/ft_lstlast.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c lst/ft_lstsize.c -o objs/./lst/ft_lstsize.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c lst/ft_lstadd_front.c -o objs/./lst/ft_lstadd_front.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c lst/ft_lstnew.c -o objs/./lst/ft_lstnew.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strlen.c -o objs/./str/ft_strlen.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strlcpy.c -o objs/./str/ft_strlcpy.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strlcat.c -o objs/./str/ft_strlcat.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strrchr.c -o objs/./str/ft_strrchr.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strncmp.c -o objs/./str/ft_strncmp.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strnstr.c -o objs/./str/ft_strnstr.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strtrim.c -o objs/./str/ft_strtrim.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strmapi.c -o objs/./str/ft_strmapi.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_striteri.c -o objs/./str/ft_striteri.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strdup.c -o objs/./str/ft_strdup.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_substr.c -o objs/./str/ft_substr.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strjoin.c -o objs/./str/ft_strjoin.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strcat.c -o objs/./str/ft_strcat.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_putchar_fd.c -o objs/./str/ft_putchar_fd.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_putstr_fd.c -o objs/./str/ft_putstr_fd.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_toupper.c -o objs/./str/ft_toupper.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_tolower.c -o objs/./str/ft_tolower.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_putendl_fd.c -o objs/./str/ft_putendl_fd.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strchr.c -o objs/./str/ft_strchr.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_split.c -o objs/./str/ft_split.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c str/ft_strchr_bool.c -o objs/./str/ft_strchr_bool.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c mem_move/ft_memset.c -o objs/./mem_move/ft_memset.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c mem_move/ft_memmove.c -o objs/./mem_move/ft_memmove.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c mem_move/ft_memcmp.c -o objs/./mem_move/ft_memcmp.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c mem_move/ft_memcpy.c -o objs/./mem_move/ft_memcpy.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c is/ft_isalpha.c -o objs/./is/ft_isalpha.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c is/ft_isdigit.c -o objs/./is/ft_isdigit.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c is/ft_isalnum.c -o objs/./is/ft_isalnum.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c is/ft_isascii.c -o objs/./is/ft_isascii.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c is/ft_isprint.c -o objs/./is/ft_isprint.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c atoitoa/ft_atoi.c -o objs/./atoitoa/ft_atoi.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c atoitoa/ft_itoa.c -o objs/./atoitoa/ft_itoa.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/math
+mkdir -p ./objs/mem_alloc
+mkdir -p ./objs/lst
+mkdir -p ./objs/str
+mkdir -p ./objs/mem_move
+mkdir -p ./objs/is
+mkdir -p ./objs/atoitoa
+gcc -Wall -Werror -Wextra -c atoitoa/ft_atoi_base.c -o objs/./atoitoa/ft_atoi_base.o
+printf "[32m■"
+ 
+echo '\n'[32m"LIBFT READY FOR NEXT !!!""\033[0m"
+ar -rcs libft.a  ./objs/./math/ft_ultimate_range.o  ./objs/./math/ft_putnbr.o  ./objs/./math/ft_range.o  ./objs/./math/ft_swap.o  ./objs/./math/ft_rev_int_tab.o  ./objs/./math/ft_nbrlen.o  ./objs/./math/ft_putnbr_fd.o  ./objs/./math/ft_swap.o  ./objs/./math/ft_p_or_imp.o  ./objs/./math/ft_array_len.o  ./objs/./mem_alloc/ft_bzero.o  ./objs/./mem_alloc/ft_calloc.o  ./objs/./mem_alloc/free_ptr.o  ./objs/./lst/ft_lstmap.o  ./objs/./lst/ft_lstiter.o  ./objs/./lst/ft_lstclear.o  ./objs/./lst/ft_lstdelone.o  ./objs/./lst/ft_lstadd_back.o  ./objs/./lst/ft_lstlast.o  ./objs/./lst/ft_lstsize.o  ./objs/./lst/ft_lstadd_front.o  ./objs/./lst/ft_lstnew.o  ./objs/./str/ft_strlen.o  ./objs/./str/ft_strlcpy.o  ./objs/./str/ft_strlcat.o  ./objs/./str/ft_strrchr.o  ./objs/./str/ft_strncmp.o  ./objs/./str/ft_strnstr.o  ./objs/./str/ft_strtrim.o  ./objs/./str/ft_strmapi.o  ./objs/./str/ft_striteri.o  ./objs/./str/ft_strdup.o  ./objs/./str/ft_substr.o  ./objs/./str/ft_strjoin.o  ./objs/./str/ft_strcat.o  ./objs/./str/ft_putchar_fd.o  ./objs/./str/ft_putstr_fd.o  ./objs/./str/ft_toupper.o  ./objs/./str/ft_tolower.o  ./objs/./str/ft_strmapi.o  ./objs/./str/ft_striteri.o  ./objs/./str/ft_putendl_fd.o  ./objs/./str/ft_strchr.o  ./objs/./str/ft_split.o  ./objs/./str/ft_strchr_bool.o  ./objs/./mem_move/ft_memset.o  ./objs/./mem_move/ft_memmove.o  ./objs/./mem_move/ft_memcmp.o  ./objs/./mem_move/ft_memcpy.o  ./objs/./is/ft_isalpha.o  ./objs/./is/ft_isdigit.o  ./objs/./is/ft_isalnum.o  ./objs/./is/ft_isascii.o  ./objs/./is/ft_isprint.o  ./objs/./atoitoa/ft_atoi.o  ./objs/./atoitoa/ft_itoa.o  ./objs/./atoitoa/ft_atoi_base.o
+make[1]: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/cub_3D/src/libft'
+echo [35m"COMPILATION DE Cub_3D EN COURS...""\033[0m"
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/cube3d.c -o objs/cube3d.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/utils/utils.c -o objs/utils/utils.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/utils/check_entry.c -o objs/utils/check_entry.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/utils/check_boarder.c -o objs/utils/check_boarder.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/kill/kill_game.c -o objs/kill/kill_game.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/init/init_imgs.c -o objs/init/init_imgs.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/init/init_var.c -o objs/init/init_var.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/draw/draw_grid.c -o objs/draw/draw_grid.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/draw/draw_env.c -o objs/draw/draw_env.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/draw/draw_raycast.c -o objs/draw/draw_raycast.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/draw/draw_3d.c -o objs/draw/draw_3d.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/move/key_pressed.c -o objs/move/key_pressed.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/move/mouse.c -o objs/move/mouse.o
+printf "[32m■"
+ 
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/move/key_press_suite.c -o objs/move/key_press_suite.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/ray/raycast.c -o objs/ray/raycast.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/get_next_line/gnl.c -o objs/get_next_line/gnl.o
+printf "[32m■"
+mkdir -p ./objs/
+mkdir -p ./objs/get_next_line
+mkdir -p ./objs/utils
+mkdir -p ./objs/kill
+mkdir -p ./objs/init
+mkdir -p ./objs/draw
+mkdir -p ./objs/move
+mkdir -p ./objs/ray
+mkdir -p ./objs/libft
+gcc -Wall -Werror -Wextra -c src/get_next_line/gnl_utils.c -o objs/get_next_line/gnl_utils.o
+printf "[32m■"
+echo [35m"\nCUBE READY !!!""\033[0m"
+cp minilibx/mlx-linux/libmlx.a cub3D
+gcc cub3D  ./objs/cube3d.o  ./objs/utils/utils.o  ./objs/utils/check_entry.o  ./objs/utils/check_boarder.o  ./objs/kill/kill_game.o  ./objs/init/init_imgs.o  ./objs/init/init_var.o  ./objs/draw/draw_grid.o  ./objs/draw/draw_env.o  ./objs/draw/draw_raycast.o  ./objs/draw/draw_3d.o  ./objs/move/key_pressed.o  ./objs/move/mouse.o  ./objs/move/key_press_suite.o  ./objs/ray/raycast.o  ./objs/get_next_line/gnl.o  ./objs/get_next_line/gnl_utils.o minilibx/mlx-linux/libmlx.a src/libft/libft.a -Wall -Werror -Wextra -lbsd -lXext -lX11 -lm -o cub_3D
+./cub_3D maps/test_02.cub
+make: Leaving directory '/home/dracken24/Desktop/prog/42_en_cours/cub_3D'
+ 
