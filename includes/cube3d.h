@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:44:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/02 07:03:04 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:58:16 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,8 @@ typedef struct s_game {
 	int				move_a;
 	int				move_s;
 	int				move_d;
+	int				move_ri;
+	int				move_lft;
 }	t_game;
 
 /***************************** Check *****************************/
@@ -167,6 +169,8 @@ int		ft_split_xpm_save_all_colors(t_xpm *xpm, int i);
 
 /***************************** Control *****************************/
 
+void	ft_move_lft(t_game *game);
+void	ft_move_ri(t_game *game);
 void	ft_move_w(t_game *game);
 void	ft_move_a(t_game *game);
 void	ft_move_s(t_game *game);

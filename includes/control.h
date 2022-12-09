@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:44:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/07 01:51:04 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:58:44 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ typedef enum s_keyboard
 	KEY_D = 2,
 	KEY_S = 1,
 	KEY_W = 13,
+	KEY_RIGHT = 124,
+	KEY_LEFT = 123,
 	KEY_E = 14,
 	KEY_Q = 12,
 	KEY_R = 15,

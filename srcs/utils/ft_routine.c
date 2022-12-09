@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/01 18:37:21 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/09 13:00:51 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_routine(t_game *game)
 {
 
 	ft_raycast(game);
+	ft_move_lft(game);
+	ft_move_ri(game);
 	ft_move_w(game);
 	ft_move_s(game);
 	ft_move_a(game);
