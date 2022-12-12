@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   raycast_02.c                                       :+:      :+:    :+:   */
+/*   raycast_02_b.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 19:20:34 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/02 01:35:32 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/12 16:33:02 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,19 +66,8 @@ t_xpm	*ft_take_good_wall(t_game *game, t_ray *ray)
 	return (&game->imgs.texture_e);
 }
 
-void	ft_draw_all_lines_suite(t_game *game, t_vector2 pos, t_ray *ray)
+void	ft_draw_all_lines_suite(t_game *game, t_ray *ray)
 {
-	(void)pos;
-	// int			tmp;
-	
-	// tmp = SCREENH;
-	// while (ray->w.y < tmp + 1)
-	// {
-	// 	pos.x = (int)(ray->tpos.y + ray->v.x);
-	// 	pos.y = tmp;
-	// 	draw_color(game, game->imgs.img.name, pos, game->imgs.down.coll);
-	// 	tmp--;
-	// }
 	if (game->see_door == 1)
 	{
 		ft_ray_init(game, game->save_ray, game->save_ply);
@@ -105,12 +94,7 @@ static void	ft_draw_all_lines(t_game *game, int line_height,
 	t_vector2	pos;
 
 	while (ray->w.y < ray->w.x)
-	{
-		// pos.x = (int)(ray->tpos.y + ray->v.x);
-		// pos.y = ray->w.y;
-		// draw_color(game, game->imgs.img.name, pos, game->imgs.top.coll);
 		ray->w.y++;
-	}
 	ray->t_step.x = 1.0 * display->len_x / line_height;
 	ray->tpos.x = (ray->draw.x - SCREENH / 2 + line_height / 2) * ray->t_step.x;
 	while (ray->w.x < ray->draw.y)
@@ -125,7 +109,7 @@ static void	ft_draw_all_lines(t_game *game, int line_height,
 		ray->w.x++;
 	}
 	ray->w.y = ray->w.x;
-	ft_draw_all_lines_suite(game, pos, ray);
+	ft_draw_all_lines_suite(game, ray);
 	game->see_door = 0;
 	game->see_enemy = 0;
 }

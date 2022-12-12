@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   raycast_01.c                                       :+:      :+:    :+:   */
+/*   raycast_01_b.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/01 20:15:41 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/12 16:27:17 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ static void	ft_raycast_hit(t_game *game, t_ray *ray, t_enemy *enemy)
 		}
 		if (game->world_map[ray->map.x][ray->map.y] == 'Z')
 		{
-			// printf("BB\n");
 			game->enemy_mapx = ray->map.x;
 			game->enemy_mapy = ray->map.y;
 		}
@@ -129,7 +128,6 @@ void	ft_raycast(t_game *game)
 	while (ray->pos.x <= ray->pos.y + 1)
 	{
 		game->scale_floorx++;
-		// printf("%d\n", ++i);
 		ft_raycast_loop(game, ray, player);
 		ft_raycast_hit(game, ray, enemy);
 		ft_raycast_suite(game, ray);

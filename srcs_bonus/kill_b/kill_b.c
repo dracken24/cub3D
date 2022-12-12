@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/07 02:06:33 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/12 16:45:34 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,31 +77,11 @@ void	ft_free_imgs8(t_game *game, int i)
 		ft_free_ptr((void **)game->enemy0.face[i].all_colors);
 		ft_free_ptr((void **)game->enemy0.face[i].cpy_fd);
 		ft_free_ptr((void **)game->enemy0.face[i].colors);
-		ft_free_ptr((void **)game->enemy0.back[i].tile);
-		ft_free_ptr((void **)game->enemy0.back[i].all_colors);
-		ft_free_ptr((void **)game->enemy0.back[i].cpy_fd);
-		ft_free_ptr((void **)game->enemy0.back[i].colors);
-		ft_free_ptr((void **)game->enemy0.lft[i].tile);
-		ft_free_ptr((void **)game->enemy0.lft[i].all_colors);
-		ft_free_ptr((void **)game->enemy0.lft[i].cpy_fd);
-		ft_free_ptr((void **)game->enemy0.lft[i].colors);
-		ft_free_ptr((void **)game->enemy0.right[i].tile);
-		ft_free_ptr((void **)game->enemy0.right[i].all_colors);
-		ft_free_ptr((void **)game->enemy0.right[i].cpy_fd);
-		ft_free_ptr((void **)game->enemy0.right[i].colors);
 	}
 }
 
-void	ft_free_imgs9(t_game *game, int i)
+void	ft_free_imgs9(t_game *game)
 {
-	i = -1;
-	while (++i < 10)
-	{
-		ft_free_ptr((void **)game->enemy0.death[i].tile);
-		ft_free_ptr((void **)game->enemy0.death[i].all_colors);
-		ft_free_ptr((void **)game->enemy0.death[i].cpy_fd);
-		ft_free_ptr((void **)game->enemy0.death[i].colors);
-	}
 	ft_free_ptr((void **)game->imgs.handgun.logo.tile);
 	ft_free_ptr((void **)game->imgs.shotgun.logo.tile);
 	ft_free_ptr((void **)game->imgs.knife.logo.tile);
@@ -114,7 +94,6 @@ int	x_quit(t_game *game)
 
 	i = 0;
 	game->music.quit = 1;
-	// ft_free(game->all_ray);
 	system("killall afplay");
 	ft_free_ptr((void **)game->world_map);
 	ft_free(game->ray);
@@ -126,7 +105,7 @@ int	x_quit(t_game *game)
 	ft_free_imgs6(game, i);
 	ft_free_imgs7(game, i);
 	ft_free_imgs8(game, i);
-	ft_free_imgs9(game, i);
+	ft_free_imgs9(game);
 	printf("Why did you kill me !#*@**#?\n");
 	exit(0);
 }

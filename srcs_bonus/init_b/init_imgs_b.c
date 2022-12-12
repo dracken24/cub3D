@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 11:08:24 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/07 02:00:42 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/12 13:34:58 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,6 @@ void	ft_init_imgs(t_game *game)
 	ft_init_menu(game);
 	ft_init_sprites(game, game->imgs.doors.door0, "./fd/door", 15);
 	ft_init_sprites(game, game->enemy0.face, "./fd/enemy00/face", 4);
-	ft_init_sprites(game, game->enemy0.back, "./fd/enemy00/back", 4);
-	ft_init_sprites(game, game->enemy0.lft, "./fd/enemy00/lft", 4);
-	ft_init_sprites(game, game->enemy0.right, "./fd/enemy00/right", 4);
-	ft_init_sprites(game, game->enemy0.death, "./fd/enemy00/death", 10);
 	ft_init_sprites(game, game->imgs.nbrs.nbrs, "./fd/nbrs", 11);
 	ft_init_bullet(game);
 	ft_end_threads(game);

@@ -6,10 +6,9 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:44:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/07 01:51:28 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/12 16:46:20 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef CUBE3D_BONUS_H
 # define CUBE3D_BONUS_H
@@ -171,7 +170,6 @@ typedef struct s_game {
 	double			dir_x;
 	double			dir_y;
 
-	// color gestion
 	void			**textures;
 	void			*vmenu;
 	char			*cmenu;
@@ -186,7 +184,6 @@ typedef struct s_game {
 	t_ply			*player;
 	t_enemy			enemy0;
 
-	// move
 	double			move_speed;
 	double			rot_speed;
 
@@ -238,7 +235,6 @@ typedef struct s_game {
 	int				scale_floorx;
 	int				ct_hit;
 
-	/** Move **/
 	int				move_w;
 	int				move_a;
 	int				move_s;
