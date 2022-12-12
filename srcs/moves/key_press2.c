@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:41:31 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/09 12:59:26 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/12 11:33:30 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,61 +85,4 @@ void	ft_move_d(t_game *game)
 		if (game->world_map[pos.x][pos.y] != '1')
 			game->player->pos.y += game->player->plane.y * game->move_speed;
 	}
-}
-
-void	ft_move_lft(t_game *game)
-{
-	double		olddirx;
-	double		oldplanex;
-
-	olddirx = game->player->dir.x;
-	oldplanex = game->player->plane.x;
-	if (game->move_lft == 1)
-	{
-		game->player->dir.x = game->player->dir.x * cos(game->rot_speed)
-			- game->player->dir.y * sin(game->rot_speed);
-		game->player->dir.y = olddirx * sin(game->rot_speed)
-			+ game->player->dir.y * cos(game->rot_speed);
-		game->player->plane.x = game->player->plane.x * cos(game->rot_speed)
-			- game->player->plane.y * sin(game->rot_speed);
-		game->player->plane.y = oldplanex * sin(game->rot_speed)
-			+ game->player->plane.y * cos(game->rot_speed);
-	}
-}
-
-void	ft_move_ri(t_game *game)
-{
-	double		olddirx;
-	double		oldplanex;
-
-	olddirx = game->player->dir.x;
-	oldplanex = game->player->plane.x;
-	if (game->move_ri == 1)
-	{
-		game->player->dir.x = game->player->dir.x * cos(-game->rot_speed)
-			- game->player->dir.y * sin(-game->rot_speed);
-		game->player->dir.y = olddirx * sin(-game->rot_speed)
-			+ game->player->dir.y * cos(-game->rot_speed);
-		game->player->plane.x = game->player->plane.x * cos(-game->rot_speed)
-			- game->player->plane.y * sin(-game->rot_speed);
-		game->player->plane.y = oldplanex * sin(-game->rot_speed)
-			+ game->player->plane.y * cos(-game->rot_speed);
-	}
-}
-
-int	key_release(int key, t_game *game)
-{
-	if (key == KEY_W)
-		game->move_w = 0;
-	else if (key == KEY_A)
-		game->move_a = 0;
-	else if (key == KEY_S)
-		game->move_s = 0;
-	else if (key == KEY_D)
-		game->move_d = 0;
-	else if (key == KEY_RIGHT)
-		game->move_ri = 0;
-	else if (key == KEY_LEFT)
-		game->move_lft = 0;
-	return (0);
 }
