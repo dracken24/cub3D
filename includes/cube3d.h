@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:44:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/09 12:58:16 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/12 16:52:47 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ typedef struct s_game {
 	double			pos_y;
 	double			dir_x;
 	double			dir_y;
-	
+
 	int				endian;
 	int				pixel;
 	int				color;
