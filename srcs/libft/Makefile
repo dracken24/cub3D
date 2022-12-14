@@ -6,7 +6,7 @@
 #    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 11:43:06 by nadesjar          #+#    #+#              #
-#    Updated: 2022/10/21 13:18:29 by nadesjar         ###   ########.fr        #
+#    Updated: 2022/12/14 00:10:09 by nadesjar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,6 @@ msg_out:
 	@echo '\n'$G"LIBFT READY FOR NEXT !!!\n"$W
 
 clean:
-	@rm -f $(OBJ)
 	@rm -fr ./objs
 
 fclean: clean

@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 12:15:30 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/10/19 13:05:13 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 23:31:11 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,3 @@ int	ft_str_to_hexa(const char *str)
 	}
 	return (hexa);
 }
-
-// int	main(void)
-// {
-// 	char	*str;
-// 	int	hexa;
-	
-// 	str = ft_strdup("18FFFF");
-// 	int	len = (int)ft_strlen(str);
-// 	hexa = ft_str_to_hexa(str);
-// 	printf("HEX: %d\n", hexa);
-// 	free(str);
-// 	return (0);
-// }

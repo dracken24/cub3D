@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 12:59:54 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/10/20 16:29:19 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 23:33:27 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_free_ptr(void **array)
 	while (array[++i])
 	{
 		if (array[i])
-			array[i]= ft_free(array[i]);
+			array[i] = ft_free(array[i]);
 	}
 	ft_free(array);
 }

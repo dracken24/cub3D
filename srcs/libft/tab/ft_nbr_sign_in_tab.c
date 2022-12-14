@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 12:38:42 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/08/29 12:48:01 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 23:35:23 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_nbr_sign_in_tab(char **tab, char c)
 	int	i;
 	int	k;
 	int	ret;
-	
+
 	if (!tab || !c)
 		return (-1);
 	ret = 0;

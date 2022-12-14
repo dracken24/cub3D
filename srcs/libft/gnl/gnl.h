@@ -6,12 +6,12 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:12:33 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/10/05 22:23:57 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 23:30:08 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_BONUS_H
-# define GET_NEXT_LINE_BONUS_H
+#ifndef GNL_H
+# define GNL_H
 
 # include <stdlib.h>
 # include <fcntl.h>

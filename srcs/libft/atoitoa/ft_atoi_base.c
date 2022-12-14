@@ -6,13 +6,13 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:55:46 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/09/29 12:52:46 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 23:28:56 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int		ft_is_in_base(char c, char *base)
+int	ft_is_in_base(char c, char *base)
 {
 	int		i;
 
@@ -25,7 +25,7 @@ int		ft_is_in_base(char c, char *base)
 		return (1);
 }
 
-int		ft_get_int_from_base(char c, char *base)
+int	ft_get_int_from_base(char c, char *base)
 {
 	int		i;
 
@@ -41,7 +41,7 @@ int		ft_get_int_from_base(char c, char *base)
 	return (i);
 }
 
-int		ft_check_base(char *base)
+int	ft_check_base(char *base)
 {
 	int		i;
 	int		j;
@@ -54,9 +54,9 @@ int		ft_check_base(char *base)
 	i = 0;
 	while (base[i])
 	{
-		if (base[i] == '-' || base[i] == '+' || base[i] == '\f' ||
-				base[i] == '\t' || base[i] == ' ' || base[i] == '\n' ||
-				base[i] == '\r' || base[i] == '\v')
+		if (base[i] == '-' || base[i] == '+' || base[i] == '\f'
+			|| base[i] == '\t' || base[i] == ' ' || base[i] == '\n'
+			|| base[i] == '\r' || base[i] == '\v')
 			return (0);
 		j = i + 1;
 		while (base[j])
@@ -70,14 +70,14 @@ int		ft_check_base(char *base)
 	return (1);
 }
 
-int		skip_whitespace_minus(char *str, int *ptr_i)
+int	skip_whitespace_minus(char *str, int *ptr_i)
 {
 	int		minus_count;
 	int		i;
 
 	i = 0;
-	while (str[i] == '\f' || str[i] == '\t' || str[i] == ' ' ||
-			str[i] == '\n' || str[i] == '\r' || str[i] == '\v')
+	while (str[i] == '\f' || str[i] == '\t' || str[i] == ' '
+		|| str[i] == '\n' || str[i] == '\r' || str[i] == '\v')
 		i++;
 	minus_count = 0;
 	while (str[i] && (str[i] == '+' || str[i] == '-'))
@@ -90,7 +90,7 @@ int		skip_whitespace_minus(char *str, int *ptr_i)
 	return (minus_count);
 }
 
-int		ft_atoi_base(char *str, char *base)
+int	ft_atoi_base(char *str, char *base)
 {
 	int		i;
 	int		sign;

@@ -6,10 +6,9 @@
 #    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/19 16:09:57 by nadesjar          #+#    #+#              #
-#    Updated: 2022/12/07 01:50:07 by nadesjar         ###   ########.fr        #
+#    Updated: 2022/12/14 00:17:09 by nadesjar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 PATH_OBJS 		= ./objs/
 PATH_SRCS		= ./srcs/
@@ -89,7 +88,7 @@ all: signature $(LIBS) $(NAME)
 $(NAME): msg_in $(OBJS) msg_out
 	@cp $(MLX_LIB_MAC) $(NAME)
 	@gcc $(OBJS) $(MLX_LIB_MAC) $(LIBFT_A) $(MLXFLAG_MAC) -o $(NAME)
-	@./$(NAME) ./maps/test_mandatory.cub
+# @./$(NAME) ./maps/test_mandatory.cub
 
 $(PATH_OBJS)%.o:	$(PATH_SRCS)%.c
 	@mkdir -p $(PATH_OBJS)
@@ -110,7 +109,7 @@ bonus: $(NAME_B)
 $(NAME_B): msg_in $(OBJS_B) msg_out
 	@cp $(MLX_LIB_MAC) $(NAME_B)
 	@gcc $(OBJS_B) $(MLX_LIB_MAC) $(LIBFT_A) $(MLXFLAG_MAC) -o $(NAME_B)
-	@./$(NAME_B) ./maps/test.cub
+# @./$(NAME_B) ./maps/test.cub
 
 $(PATH_OBJS_B)%.o:	$(PATH_SRCS_B)%.c
 	@mkdir -p $(PATH_OBJS_B)
@@ -129,7 +128,6 @@ $(PATH_OBJS_B)%.o:	$(PATH_SRCS_B)%.c
 
 make_lib:
 	@$(MAKE) -C ./srcs/libft
-# @$(MAKE) -C ./minilibx//mlx-linux
 
 msg_in:
 	@echo $L"COMPILATION DE Cub_3D EN COURS..."$W
@@ -140,10 +138,11 @@ msg_out:
 clean:
 	@rm -fr ./objs/ ./objs_bonus/
 	@echo $G"\n                                   BYE BYE\n"$W
-# @$(MAKE) fclean -C ./srcs/libft
+	@$(MAKE) clean -C ./srcs/libft
 
 fclean: clean
 	@rm -f $(NAME) $(NAME_B) $(LIBFT_A) tmp.cub
+	@$(MAKE) fclean -C ./srcs/libft
 
 signature:
 	@echo "$G\n\|/~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~\|/"
@@ -161,4 +160,4 @@ W	= $(shell tput -Txterm setaf 7)
 
 re:	fclean all
 
-.PHONY: all make_lib push signature clean fclean re
+.PHONY: all make_lib push signature msg_in msg_out clean fclean re

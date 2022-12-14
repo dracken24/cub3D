@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 12:06:41 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/08/04 12:06:56 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/14 00:06:31 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,29 @@ static char	*word_dup(const char *str, int start, int finish)
 	return (word);
 }
 
+void	ft_split_while(t_lct *ct, char **tab, char const *str, char c)
+{
+	if (str[ct->i] == '"')
+	{
+		ct->index = ct->i + 1;
+		ct->i++;
+		while (str[ct->i] != '"')
+			ct->i++;
+		tab[ct->k++] = word_dup(str, ct->index, ct->i);
+		ct->index = -1;
+	}
+	else if (str[ct->i] != c && ct->index < 0)
+		ct->index = ct->i;
+	else if ((str[ct->i] == c || ct->i == ft_strlen(str)) && ct->index >= 0)
+	{
+		tab[ct->k++] = word_dup(str, ct->index, ct->i);
+		ct->index = -1;
+	}
+}
+
 char	**ft_split_cmd(char const *str, char c)
 {
-	size_t	i;
-	size_t	k;
-	int		index;
+	t_lct	ct;
 	char	**tab;
 
 	if (!str)
@@ -56,28 +74,13 @@ char	**ft_split_cmd(char const *str, char c)
 	tab = ft_calloc((ft_count_word(str, c) + 1), sizeof(char *));
 	if (!tab)
 		return (NULL);
-	i = -1;
-	k = 0;
-	index = -1;
-	while (++i <= ft_strlen(str))
+	ct.i = -1;
+	ct.k = 0;
+	ct.index = -1;
+	while (++ct.i <= ft_strlen(str))
 	{
-		if (str[i] == '"')
-		{
-			index = i + 1;
-			i++;
-			while (str[i] != '"')
-				i++;
-			tab[k++] = word_dup(str, index, i);
-			index = -1;
-		}
-		else if (str[i] != c && index < 0)
-			index = i;
-		else if ((str[i] == c || i == ft_strlen(str)) && index >= 0)
-		{
-			tab[k++] = word_dup(str, index, i);
-			index = -1;
-		}
+		ft_split_while(&ct, tab, str, c);
 	}
-	tab[k] = 0;
+	tab[ct.k] = 0;
 	return (tab);
 }

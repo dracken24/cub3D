@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 10:41:03 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/05/07 00:04:31 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 23:58:06 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *str, int c, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		((char *) str)[i] = (char) c;
+		((unsigned char *) str)[i] = (unsigned char) c;
 		i++;
 	}
 	return (str);

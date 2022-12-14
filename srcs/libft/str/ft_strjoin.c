@@ -6,13 +6,13 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 15:42:51 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/10/10 11:40:07 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 23:34:00 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static void ft_free_str(char *str1, char *str2, int nbr)
+static void	ft_free_str(char *str1, char *str2, int nbr)
 {
 	if (nbr == 1)
 		free(str1);

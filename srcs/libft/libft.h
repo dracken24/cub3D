@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 14:00:19 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/10/21 13:15:09 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/14 00:05:21 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 # include <stdio.h>
 # include <stdbool.h>
 
-
 # define RED 1
 # define GREEN 2
 # define YELLOW 3
@@ -35,17 +34,18 @@
 # define BASEXMIN "0123456789abcdef"
 # define BASEXMAJ "0123456789ABCDEF"
 
-typedef unsigned int t_uint;
-
-// typedef struct s_ct{
-// 	int		i;
-// 	int		k;
-// }	t_ct;
+typedef unsigned int	t_uint;
 
 typedef struct s_list{
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct s_lct{
+	size_t	i;
+	size_t	k;
+	int		index;
+}	t_lct;
 
 size_t	ft_strlcat(char *dest, char *src, size_t size);
 size_t	ft_strlcpy(char *dest, char *src, size_t size);
@@ -83,7 +83,8 @@ bool	ft_strchr_bool(const char *str, int c);
 bool	ft_tabchr(char **tab, char *find);
 bool	ft_is_only(char *buffer, char c);
 
-char	*ft_strnstr_ret_tofind(const char *str, const char *to_find, size_t len);
+char	*ft_strnstr_ret_tofind(const char *str,
+			const char *to_find, size_t len);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 char	*ft_strmapi(const char *str, char (*f)(unsigned int, char));
 char	*ft_strchr_tab(char **tab, char **tab_2, size_t nbr_turn);

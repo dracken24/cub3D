@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 00:04:50 by dantremb          #+#    #+#             */
-/*   Updated: 2022/08/26 11:54:59 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 23:30:56 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_array_size(char **array)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (array[i])

@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 11:52:00 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/08/29 12:09:13 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 23:49:11 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 bool	ft_tabchr(char **tab, char *find)
 {
-	int i;
-	int k;
+	int	i;
+	int	k;
+
 	if (!tab || !find)
 		return (false);
 	i = -1;
