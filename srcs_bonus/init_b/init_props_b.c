@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 19:22:40 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/07 01:47:19 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:25:41 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	ft_init_logo(t_xpm *img, char *name)
 
 void	ft_init_shotgun(t_game *game)
 {
-	// (void)game;
 	ft_init_sprites(game, game->imgs.shotgun.fire,
 		"./fd/shotgun", 24);
 	ft_init_logo(&game->imgs.shotgun.logo,

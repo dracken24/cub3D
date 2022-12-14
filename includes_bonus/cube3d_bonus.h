@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:44:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/12 16:46:20 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:41:17 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include "../srcs/libft/libft.h"
 // # include "../minilibx/MLX42/include/MLX42/MLX42_int.h"
-# include "../minilibx/mlx-linux/mlx.h"
-// # include "../minilibx/opengl/mlx.h"
+// # include "../minilibx/mlx-linux/mlx.h"
+# include "../minilibx/opengl/mlx.h"
 # include "imgs_bonus.h"
 # include <math.h>
 # include <stdbool.h>
@@ -31,14 +31,14 @@
 # define TILESIZE 256
 # define MAPW 24
 # define MAPH 24
-# define BUFF_SIZE 6000
+# define BUFF_SIZE 12000
 # define S_PIXEL 8
 # define PRECISION 1
 
 // parameters for scaling and moving the sprites
-# define uDiv 1
-# define vDiv 1
-# define vMove 0.0
+# define UDIV 1
+# define VDIV 1
+# define VMOVE 0.0
 
 typedef unsigned char	t_byte;
 typedef unsigned int	t_uint;
@@ -163,6 +163,7 @@ typedef struct s_game {
 	char			**world_map;
 	char			**tmp;
 
+	double			wall_distance;
 	double			plane_x;
 	double			plane_y;
 	double			pos_x;

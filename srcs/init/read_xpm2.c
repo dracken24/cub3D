@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:29:51 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/01 15:29:56 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:18:12 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,6 @@ void	ft_mount_tile(t_xpm *xpm)
 		{
 			xpm->tile[i][k] = \
 				ft_return_rgb(ft_change_sygn(xpm, xpm->colors[i][k]));
-			// printf("col: %d\n", xpm->tile[i][k]);
 		}
 	}
 }

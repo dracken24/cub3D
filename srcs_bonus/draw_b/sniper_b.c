@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 20:43:31 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/07 02:00:22 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:21:20 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	ft_sniper_shoot_in_zoom(t_game *game, t_vector2 pos, int *i)
 		game->fire = 0;
 		return ;
 	}
-	// printf("I: %d\n", *i);
 	ft_print_sprite(game, &game->imgs.sniper.shoot_zoom[*i], pos, -16777216);
 	++*i;
 	if (*i >= 18)
@@ -87,7 +86,6 @@ void	ft_put_sniper(t_game *game, t_vector2 pos, int *i)
 
 void	ft_reload_sniper(t_game *game)
 {
-	// t_vector2	pos;
 	static int	i;
 	static int	k;
 
@@ -95,8 +93,6 @@ void	ft_reload_sniper(t_game *game)
 		i = 0;
 	if (!k)
 		k = 0;
-	// pos.x = 0;
-	// pos.y = 0;
 	ft_zoom_out_sniper1(game, &k);
 	if (game->zoom == 2)
 		ft_zoom_out_sniper2(game, &k);

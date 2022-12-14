@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/01 19:03:19 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:19:28 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,6 @@ void	ft_ray_init(t_game *game, t_ray *ray, t_ply *player)
 
 void	ft_raycast_loop(t_game *game, t_ray *ray, t_ply *player)
 {
-	// game->save_ply = player;
-	// game->save_ray = ray;
 	ft_ray_init(game, ray, player);
 	if (ray->raydir.y < 0)
 	{

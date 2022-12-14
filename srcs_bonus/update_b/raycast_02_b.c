@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 19:20:34 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/12 16:33:02 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:41:46 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	ft_raycast_suite(t_game *game, t_ray *ray)
 {
-	double	wall_distance;
 	double	wall_x;
 	int		line_height;
 
 	if (!(ray->side % 2))
-		wall_distance = (ray->side_d.x - ray->delta_d.x);
+		game->wall_distance = (ray->side_d.x - ray->delta_d.x);
 	else
-		wall_distance = (ray->side_d.y - ray->delta_d.y);
-	game->all_ray[(int)ray->pos.x] = wall_distance;
-	line_height = (int)(SCREENH / wall_distance);
+		game->wall_distance = (ray->side_d.y - ray->delta_d.y);
+	game->all_ray[(int)ray->pos.x] = game->wall_distance;
+	line_height = (int)(SCREENH / game->wall_distance);
 	ray->draw.x = -line_height / 2 + SCREENH / 2;
 	if (ray->draw.x < 0)
 		ray->draw.x = 0;
@@ -31,9 +30,9 @@ void	ft_raycast_suite(t_game *game, t_ray *ray)
 	if (ray->draw.y >= SCREENH)
 		ray->draw.y = SCREENH - 1;
 	if (ray->side % 2 == 0)
-		wall_x = game->player->pos.y + (wall_distance * ray->raydir.y);
+		wall_x = game->player->pos.y + (game->wall_distance * ray->raydir.y);
 	else
-		wall_x = game->player->pos.x + (wall_distance * ray->raydir.x);
+		wall_x = game->player->pos.x + (game->wall_distance * ray->raydir.x);
 	wall_x -= floorf(wall_x);
 	ray->text.x = (int)(wall_x * ft_take_good_wall(game, ray)->len_x);
 	ray->t_step.y = SCREENW / TILESIZE / 5;
@@ -75,13 +74,13 @@ void	ft_draw_all_lines_suite(t_game *game, t_ray *ray)
 		{
 			ray->step.y = -1;
 			ray->side_d.y = (game->save_ply->pos.y - game->save_ray->map.y)
-					* game->save_ray->delta_d.y;
+				* game->save_ray->delta_d.y;
 		}
 		else
 		{
 			ray->step.y = 1;
 			ray->side_d.y = (ray->map.y + 1.0 - game->save_ply->pos.y)
-					* game->save_ray->delta_d.y;
+				* game->save_ray->delta_d.y;
 		}
 		ft_raycast_hit_d(game, ray);
 		ft_raycast_suite_d(game, game->save_ray);

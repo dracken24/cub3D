@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/12 16:45:34 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:23:19 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ int	x_quit(t_game *game)
 	game->music.quit = 1;
 	system("killall afplay");
 	ft_free_ptr((void **)game->world_map);
+	ft_free(game->all_ray);
 	ft_free(game->ray);
 	ft_free_imgs1(game);
 	ft_free_imgs2(game);

@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:41:31 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/12 11:33:30 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:19:13 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,16 +53,18 @@ void	ft_move_s(t_game *game)
 
 void	ft_move_a(t_game *game)
 {
-	t_vector2 pos;
+	t_vector2	pos;
 
 	if (game->move_a == 1)
 	{
-		pos.x = (int)(game->player->pos.x - game->player->plane.x * game->move_speed);
+		pos.x = (int)(game->player->pos.x - game->player->plane.x
+				* game->move_speed);
 		pos.y = (int)(game->player->pos.y);
 		if (game->world_map[pos.x][pos.y] != '1')
 			game->player->pos.x -= game->player->plane.x * game->move_speed;
 		pos.x = (int)(game->player->pos.x);
-		pos.y = (int)(game->player->pos.y - game->player->plane.y * game->move_speed);
+		pos.y = (int)(game->player->pos.y - game->player->plane.y
+				* game->move_speed);
 		if (game->world_map[pos.x][pos.y] != '1')
 			game->player->pos.y -= game->player->plane.y * game->move_speed;
 	}

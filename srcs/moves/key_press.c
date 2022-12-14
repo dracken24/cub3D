@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/12 11:12:06 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:18:32 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 int	key_press(int key, t_game *game)
 {
-	// dprintf(1, "KEY: %d\n", key);
-
 	if (key == KEY_W)
 		game->move_w = 1;
 	else if (key == KEY_S)

@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 13:44:58 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/07 01:01:50 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:09:39 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ void	ft_raycast_enemy2(t_game *game)
 			* game->ray_enemy.sprite.y);
 	game->ray_enemy.sprite_screen_x = (int)((game->w / 2)
 			* (1 + game->ray_enemy.transform.x / game->ray_enemy.transform.y));
-	game->ray_enemy.v_move_screen = (int)(vMove / game->ray_enemy.transform.y);
+	game->ray_enemy.v_move_screen = (int)(VMOVE / game->ray_enemy.transform.y);
 	game->ray_enemy.sprite_height = abs((int)(game->h
-				/ (game->ray_enemy.transform.y))) / vDiv;
+				/ (game->ray_enemy.transform.y))) / VDIV;
 }
 
 void	ft_raycast_enemy3(t_game *game)
@@ -58,7 +58,7 @@ void	ft_raycast_enemy3(t_game *game)
 	if (game->ray_enemy.draw_end.y >= game->h)
 		game->ray_enemy.draw_end.y = game->h - 1;
 	game->ray_enemy.sprite_width = abs((int)(game->h
-				/ (game->ray_enemy.transform.y))) / uDiv;
+				/ (game->ray_enemy.transform.y))) / UDIV;
 	game->ray_enemy.draw_start.x = -game->ray_enemy.sprite_width
 		/ 2 + game->ray_enemy.sprite_screen_x;
 	if (game->ray_enemy.draw_start.x < 0)

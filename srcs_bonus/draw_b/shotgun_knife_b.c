@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 20:46:07 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/07 02:00:01 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:21:01 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ void	ft_put_shotgun(t_game *game, t_vector2 pos, int *i)
 		}
 		else if (game->imgs.shotgun.ammo > 0 && *i == 1)
 			game->imgs.shotgun.ammo -= 2;
-		// printf("I: %d\n", *i);
 		++*i;
 		ft_shotgun_fire(game, i);
 		ft_print_sprite(game, &game->imgs.shotgun.fire[*i + 1], pos, -16777216);

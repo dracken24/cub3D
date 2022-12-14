@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils2.c                                           :+:      :+:    :+:   */
+/*   utils2_b.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:59:59 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/02 07:38:13 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:46:16 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_check_enemy_hit(t_game *game)
 {
 	t_vector2	pos;
 	static int	ct;
+
 	if (!ct || ct > 10)
 		ct = 0;
 	pos.x = 0;
@@ -40,7 +41,7 @@ void	ft_open_door(t_game *game)
 {
 	if (game->mus_ct == 24)
 	{
-		// system("killall afplay");
+		system("killall afplay");
 		game->mus_ct = 3;
 	}
 	if (game->world_map[(int)game->player->pos.x + 1]
@@ -65,7 +66,6 @@ void	ft_open_door(t_game *game)
 
 void	ft_music(t_game *game)
 {
-	// (void)game;
 	if (game->mus_ct == 1)
 	{
 		system("afplay ./music/Intermission.mp3 &");

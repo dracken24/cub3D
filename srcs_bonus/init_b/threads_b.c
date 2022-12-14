@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 20:45:47 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/07 01:47:56 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:26:39 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	*ft_load_imgs1(void *arg)
 	t_game	*game;
 
 	game = arg;
-	// (void)game;
 	ft_init_sprites(game, game->imgs.sniper.load, "./fd/sniper_reload", 36);
 	return (NULL);
 }
@@ -26,7 +25,7 @@ void	*ft_load_imgs1(void *arg)
 void	*ft_load_imgs2(void *arg)
 {
 	t_game	*game;
-	// (void)game;
+
 	game = arg;
 	ft_init_sprites(game, game->imgs.sniper.shoot_zoom,
 		"./fd/sniper_shoot_zoom", 18);
@@ -39,7 +38,7 @@ void	*ft_load_imgs2(void *arg)
 void	*ft_load_imgs3(void *arg)
 {
 	t_game	*game;
-	(void)game;
+
 	game = arg;
 	game->imgs.handgun.i = 0;
 	game->imgs.handgun.handgun.name = ft_strdup("./pics/guns/handgun/01.xpm\n");
@@ -59,7 +58,7 @@ void	*ft_load_imgs4(void *arg)
 	t_game	*game;
 
 	game = arg;
-	// (void)game;
+
 	ft_init_sprites(game, game->imgs.handgun.reload, "./fd/reload_handgun", 26);
 	return (NULL);
 }

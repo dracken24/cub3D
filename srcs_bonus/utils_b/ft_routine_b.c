@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/12 16:13:25 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:45:20 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,30 @@ void	ft_all_routine(t_game *game, int *i)
 	ft_move_d(game);
 }
 
+void	ft_routine_game(t_game *game, int i)
+{
+	if (game->mus_ct == 24)
+	{
+		system("killall afplay");
+		game->mus_ct = 3;
+	}
+	ft_music(game);
+	ft_all_routine(game, &i);
+	mlx_put_image_to_window(game->mlx, game->win, game->imgs.img.img, 0, 0);
+}
+
+void	ft_routine_menu(t_game *game)
+{
+	if (game->mus_ct == 23)
+	{
+		system("killall afplay");
+		game->mus_ct = 2;
+	}
+	ft_music(game);
+	ft_put_menu(game);
+	mlx_put_image_to_window(game->mlx, game->win, game->imgs.img.img, 0, 0);
+}
+
 int	ft_routine(t_game *game)
 {
 	static int	i;
@@ -46,25 +70,11 @@ int	ft_routine(t_game *game)
 		k = 0;
 	if (game->ct.start != 1)
 	{
-		if (game->mus_ct == 24)
-		{
-			system("killall afplay");
-			game->mus_ct = 3;
-		}
-		ft_music(game);
-		ft_all_routine(game, &i);
-		mlx_put_image_to_window(game->mlx, game->win, game->imgs.img.img, 0, 0);
+		ft_routine_game(game, i);
 	}
 	else if (game->ct.start == 1)
 	{
-		if (game->mus_ct == 23)
-		{
-			system("killall afplay");
-			game->mus_ct = 2;
-		}
-		ft_music(game);
-		ft_put_menu(game);
-		mlx_put_image_to_window(game->mlx, game->win, game->imgs.img.img, 0, 0);
+		ft_routine_menu(game);
 	}
 	i++;
 	k++;

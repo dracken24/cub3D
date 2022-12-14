@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 19:20:34 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/01 18:44:24 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:19:34 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ t_xpm	*ft_take_good_wall(t_game *game, t_ray *ray)
 void	ft_draw_all_lines_suite(t_game *game, t_vector2 pos, t_ray *ray)
 {
 	int			tmp;
-	
+
 	tmp = SCREENH;
 	while (ray->w.y < tmp + 1)
 	{

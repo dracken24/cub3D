@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mouse_control.c                                    :+:      :+:    :+:   */
+/*   mouse_control_b.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/02 01:11:08 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:32:31 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,11 @@ int	ft_shoot(int button, int x, int y, t_game *game)
 		game->fire = 1;
 		game->imgs.handgun.i = 0;
 	}
-	// printf("SHOOT: x: %d y: %d button: %d\n", x, y, button);
 	return (0);
 }
 
 int	mouse_move(int x, int y, t_game *game)
 {
-	// mlx_mouse_hide(game->mlx, game->win);
 	if (game->ct.start != 1)
 		move_mouse_x(game, x);
 	game->last.x = x;

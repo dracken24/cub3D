@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/07 01:55:51 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/13 11:23:41 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void	init_vars(t_game *game)
 	game->imgs.handgun.total_ammo = 15;
 	game->imgs.shotgun.total_ammo = 12;
 	game->imgs.sniper.total_ammo = 8;
-	game->all_ray = ft_calloc(sizeof(double), 25000);
+	game->all_ray = ft_calloc(sizeof(double), BUFF_SIZE);
 	game->ray = malloc(sizeof(t_ray));
 	if (!game->ray || ! game->all_ray)
 	{
