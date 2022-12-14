@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_boarder.c                                    :+:      :+:    :+:   */
+/*   check_boarder_b.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 23:03:48 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/01 20:07:56 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/14 03:59:56 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,20 @@ void	check_char(t_game *game)
 	if (!ft_check_set(game->world_map[game->ct.i + 1][game->ct.k],
 		"NSEWB1270Z"))
 		game->ct.error = 0;
+}
+
+void	ft_load_texture(t_game *game, char *temp)
+{
+	if (ft_strncmp(temp, "NO", 2) == 0)
+		game->imgs.texture_n.name = ft_strdup(ft_trim_token(temp + 2, ' '));
+	else if (ft_strncmp(temp, "SO", 2) == 0)
+		game->imgs.texture_s.name = ft_strdup(ft_trim_token(temp + 2, ' '));
+	else if (ft_strncmp(temp, "WE", 2) == 0)
+		game->imgs.texture_w.name = ft_strdup(ft_trim_token(temp + 2, ' '));
+	else if (ft_strncmp(temp, "EA", 2) == 0)
+		game->imgs.texture_e.name = ft_strdup(ft_trim_token(temp + 2, ' '));
+	else if (ft_strncmp(temp, "F", 1) == 0)
+		game->imgs.down.name = ft_strdup(ft_trim_token(temp + 1, ' '));
+	else if (ft_strncmp(temp, "C", 1) == 0)
+		game->imgs.top.name = ft_strdup(ft_trim_token(temp + 1, ' '));
 }

@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:44:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/13 11:41:17 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/14 04:00:11 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -279,6 +279,7 @@ char	*ft_change_sygn2(t_xpm *xpm, char *buff);
 
 void	ft_split_xpm_save_colors_suite(t_xpm *xpm, int i, int k);
 void	ft_split_xpm_save_colors(t_xpm *xpm, int i);
+void	ft_load_texture(t_game *game, char *temp);
 void	ft_init_reload_handgun(t_game *game);
 void	ft_init_logo(t_xpm *img, char *name);
 void	ft_start_threads(t_game *game);

@@ -1,6 +1,6 @@
 NE ./pics/purplestone.xpm
 SO ./pics/greystone.xpm
-WO ./pics/colorstone.xpm
+WE ./pics/colorstone.xpm
 EA ./pics/eagle.xpm
 
 F 220,100,0

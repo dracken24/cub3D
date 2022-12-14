@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 12:17:02 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/13 23:34:44 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/14 02:23:54 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static char	*ft_end_buffer(char *ret, char **save)
 {
 	*save = NULL;
-	if (ft_is_only(ret, ' '))
+	if (ft_is_only(ret, ' ', ft_strlen(ret)))
 		return (NULL);
 	return (ret);
 }

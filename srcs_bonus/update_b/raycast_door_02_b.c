@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   raycast_door_02.c                                  :+:      :+:    :+:   */
+/*   raycast_door_02_b.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 19:20:34 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/01 20:15:51 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/14 04:07:42 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_draw_walls_d(t_game *game, t_vector2 pos, t_ray *ray, t_xpm *display)
 		pos.y = ray->w.x;
 		if (game->world_map[ray->map.x][ray->map.y] == '2')
 		{
-			if (display->tile[ray->text.y][ray->text.x] != (t_uint)-16777216)
+			if (display->tile[ray->text.y][ray->text.x] != (t_uint) - 16777216)
 				draw_color(game, game->imgs.img.name, pos,
 					(int)display->tile[ray->text.y][ray->text.x]);
 		}

@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:44:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/13 11:07:45 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/14 03:59:06 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,6 +161,7 @@ char	*ft_change_sygn2(t_xpm *xpm, char *buff);
 
 void	ft_split_xpm_save_colors_suite(t_xpm *xpm, int i, int k);
 void	ft_split_xpm_save_colors(t_xpm *xpm, int i);
+void	ft_load_texture(t_game *game, char *temp);
 void	ft_init_imgs(t_game *game);
 void	ft_mount_tile(t_xpm *xpm);
 void	init_vars(t_game *game);

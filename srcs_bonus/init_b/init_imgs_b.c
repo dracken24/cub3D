@@ -6,10 +6,9 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 11:08:24 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/12 13:34:58 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/14 04:06:36 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../../includes_bonus/cube3d_bonus.h"
 

@@ -6,10 +6,9 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 20:45:47 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/13 11:26:39 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/14 04:07:14 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../../includes_bonus/cube3d_bonus.h"
 
@@ -58,7 +57,6 @@ void	*ft_load_imgs4(void *arg)
 	t_game	*game;
 
 	game = arg;
-
 	ft_init_sprites(game, game->imgs.handgun.reload, "./fd/reload_handgun", 26);
 	return (NULL);
 }

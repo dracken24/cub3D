@@ -6,7 +6,7 @@
 #    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 11:43:06 by nadesjar          #+#    #+#              #
-#    Updated: 2022/12/14 00:10:09 by nadesjar         ###   ########.fr        #
+#    Updated: 2022/12/14 03:26:32 by nadesjar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ FILES 		= $(MATH)ft_ultimate_range.c $(MATH)ft_putnbr.c $(MATH)ft_range.c $(MATH
 			$(GNL)gnl.c $(GNL)gnl_utils.c \
 			$(FD)ft_open_fd.c $(FD)ft_putchar_fd.c $(FD)ft_putstr_fd.c \
 			$(FD)ft_putendl_fd.c $(FD)ft_fd_len.c $(FD)ft_print_doc.c \
-			$(UTILS)ft_color.c \
+			$(UTILS)ft_color.c $(UTILS)ft_trim_token.c \
 
 OBJS		= $(patsubst %.c, $(P_OBJS)%.o, $(FILES))
 			

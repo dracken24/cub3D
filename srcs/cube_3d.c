@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/01 20:48:49 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/14 04:08:23 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,17 @@
 
 void	ft_clean_map(int fd)
 {
-	int		fdsave;
 	char	*tmp;
+	int		fdsave;
 
 	fdsave = ft_open_fd("tmp.cub", 2);
-	if (!fd)
+	if (!fdsave)
 		return ;
 	tmp = get_next_line(fd);
 	while (tmp)
 	{
-		ft_putstr_fd(tmp, fdsave);
+		if (tmp[0] != '\n' && !ft_is_only(tmp, ' ', ft_strlen(tmp) - 2))
+			ft_putstr_fd(tmp, fdsave);
 		free(tmp);
 		tmp = get_next_line(fd);
 	}
@@ -36,27 +37,17 @@ void	ft_split_map_suite(t_game *game, int fd)
 	char	*tmp;
 
 	tmp = get_next_line(fd);
-	game->imgs.texture_n.name = ft_strdup(tmp + 3);
-	ft_free(tmp);
-	tmp = get_next_line(fd);
-	game->imgs.texture_s.name = ft_strdup(tmp + 3);
-	ft_free(tmp);
-	tmp = get_next_line(fd);
-	game->imgs.texture_w.name = ft_strdup(tmp + 3);
-	ft_free(tmp);
-	tmp = get_next_line(fd);
-	game->imgs.texture_e.name = ft_strdup(tmp + 3);
-	ft_free(tmp);
-	tmp = get_next_line(fd);
-	ft_free(tmp);
-	tmp = get_next_line(fd);
-	game->imgs.down.name = ft_strdup(tmp + 2);
-	ft_free(tmp);
-	tmp = get_next_line(fd);
-	game->imgs.top.name = ft_strdup(tmp + 2);
-	ft_free(tmp);
-	tmp = get_next_line(fd);
-	ft_free(tmp);
+	while (tmp)
+	{
+		if (tmp[0] != '\n' && !ft_is_only(tmp, ' ', ft_strlen(tmp) - 2))
+			ft_load_texture(game, ft_trim_token(tmp, ' '));
+		free(tmp);
+		if (game->imgs.texture_n.name && game->imgs.texture_s.name
+			&& game->imgs.texture_w.name && game->imgs.texture_e.name
+			&& game->imgs.down.name && game->imgs.top.name)
+			break ;
+		tmp = get_next_line(fd);
+	}
 }
 
 void	ft_split_map(t_game *game, char *name)
@@ -87,7 +78,6 @@ void	*ft_run_mlx(void *arg)
 	game->mlx = mlx_init();
 	game->win = mlx_new_window(game->mlx, game->w, game->h, "BANKAI");
 	ft_init_imgs(game);
-
 	game->player = ft_init_player(game);
 	mlx_hook(game->win, 17, 0, x_quit, game);
 	mlx_loop_hook(game->mlx, ft_routine, game);
@@ -101,6 +91,7 @@ int	main(int entry, char **name)
 {
 	t_game	game;
 
+	ft_memset(&game, 0, sizeof(t_game));
 	ft_split_map(&game, name[1]);
 	check_entry(&game, entry, "tmp.cub");
 	init_vars(&game);

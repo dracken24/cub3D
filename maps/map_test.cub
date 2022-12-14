@@ -1,7 +1,7 @@
-NE ./pics/purplestone.xpm
-SA ./pics/eagle.xpm
-WO ./pics/colorstone.xpm
-EO ./pics/greystone.xpm
+NO ./pics/purplestone.xpm
+SO ./pics/eagle.xpm
+WE ./pics/colorstone.xpm
+EA ./pics/greystone.xpm
 
 F 30,39,41
 C 85,183,208

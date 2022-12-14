@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/02 07:03:55 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/14 04:09:22 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	ft_free_imgs1(t_game *game)
 	ft_free_ptr((void **)game->imgs.texture_e.tile);
 	ft_free_ptr((void **)game->imgs.texture_w.tile);
 }
-
 
 int	x_quit(t_game *game)
 {

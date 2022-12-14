@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 14:00:19 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/14 00:05:21 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/14 03:26:04 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ double	ft_atof(const char *str);
 
 bool	ft_strchr_bool(const char *str, int c);
 bool	ft_tabchr(char **tab, char *find);
-bool	ft_is_only(char *buffer, char c);
+bool	ft_is_only(char *buffer, char c, int len);
 
 char	*ft_strnstr_ret_tofind(const char *str,
 			const char *to_find, size_t len);
@@ -93,6 +93,7 @@ char	*ft_strrchr(const char *str, int c, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strjoin(char *str1, char *str2, int nbr);
 char	**ft_split_cmd(char const *str, char c);
+char	*ft_trim_token(char *token, char sep);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strtok(char *buffer, char sep);
 char	**ft_split(char const *s, char c);
