@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:44:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/19 13:11:43 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/19 13:44:16 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,6 +185,7 @@ typedef struct s_game {
 
 	t_ply			*player;
 	t_enemy			enemy0;
+	t_vector2		pos1;
 
 	double			move_speed;
 	double			rot_speed;
@@ -387,7 +388,6 @@ void	ft_free_imgs3(t_game *game, int i);
 void	ft_free_imgs4(t_game *game, int i);
 void	ft_free_imgs5(t_game *game, int i);
 
-bool	hit_box2(t_game *game);
 bool	hit_box(t_game *game);
 
 double	ft_pythagore(double x, double y);

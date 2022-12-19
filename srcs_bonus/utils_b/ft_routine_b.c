@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/19 12:51:18 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/19 13:42:49 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void	ft_all_routine(t_game *game, int *i)
 	ft_move_s(game);
 	ft_move_a(game);
 	ft_move_d(game);
+	if (hit_box(game))
+		game->player->pos = game->player->last_pos;
 	game->player->last_pos = game->player->pos;
 }
 

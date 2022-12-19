@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:41:31 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/19 13:25:12 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/19 13:41:35 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,8 @@ void	ft_move_w(t_game *game)
 				* game->move_speed);
 		pos.y = (int)(game->player->pos.y);
 		if (game->world_map[pos.x][pos.y] != '1'
-			&& game->world_map[pos.x][pos.y] != '2' && !hit_box(game))
+			&& game->world_map[pos.x][pos.y] != '2')
 			game->player->pos.x += game->player->dir.x * game->move_speed;
-		else
-			game->player->pos = game->player->last_pos;
 		if (game->world_map[pos.x][pos.y] == '2')
 			if (game->door_open_ct >= 13)
 				game->player->pos.x += game->player->dir.x * game->move_speed;
@@ -34,13 +32,13 @@ void	ft_move_w(t_game *game)
 		pos.y = (int)(game->player->pos.y
 				+ game->player->dir.y * game->move_speed);
 		if (game->world_map[pos.x][pos.y] !=
-			'1' && game->world_map[pos.x][pos.y] != '2' && !hit_box(game))
+			'1' && game->world_map[pos.x][pos.y] != '2')
 			game->player->pos.y += game->player->dir.y * game->move_speed;
-		else
-			game->player->pos = game->player->last_pos;
 		if (game->world_map[pos.x][pos.y] == '2')
+		{
 			if (game->door_open_ct >= 13)
 				game->player->pos.y += game->player->dir.y * game->move_speed;
+		}
 	}
 }
 
@@ -54,10 +52,8 @@ void	ft_move_s(t_game *game)
 				* game->move_speed);
 		pos.y = (int)(game->player->pos.y);
 		if (game->world_map[pos.x][pos.y]
-			!= '1' && game->world_map[pos.x][pos.y] != '2' && !hit_box(game))
+			!= '1' && game->world_map[pos.x][pos.y] != '2')
 			game->player->pos.x -= game->player->dir.x * game->move_speed;
-		else
-			game->player->pos = game->player->last_pos;
 		if (game->world_map[pos.x][pos.y] == '2')
 			if (game->door_open_ct >= 13)
 				game->player->pos.x -= game->player->dir.x * game->move_speed;
@@ -65,13 +61,13 @@ void	ft_move_s(t_game *game)
 		pos.y = (int)(game->player->pos.y
 				- game->player->dir.y * game->move_speed);
 		if (game->world_map[pos.x][pos.y] != '1'
-			&& game->world_map[pos.x][pos.y] != '2' && !hit_box(game))
+			&& game->world_map[pos.x][pos.y] != '2')
 			game->player->pos.y -= game->player->dir.y * game->move_speed;
-		else
-			game->player->pos = game->player->last_pos;
 		if (game->world_map[pos.x][pos.y] == '2')
+		{
 			if (game->door_open_ct >= 13)
 				game->player->pos.y -= game->player->dir.y * game->move_speed;
+		}
 	}
 }
 
@@ -87,8 +83,6 @@ void	ft_move_a(t_game *game)
 		if (game->world_map[pos.x][pos.y] != '1'
 			&& game->world_map[pos.x][pos.y] != '2')
 			game->player->pos.x -= game->player->plane.x * game->move_speed;
-		else
-			game->player->pos = game->player->last_pos;
 		if (game->world_map[pos.x][pos.y] == '2')
 			if (game->door_open_ct >= 13)
 				game->player->pos.x -= game->player->plane.x * game->move_speed;
@@ -98,11 +92,11 @@ void	ft_move_a(t_game *game)
 		if (game->world_map[pos.x][pos.y] != '1'
 			&& game->world_map[pos.x][pos.y] != '2')
 			game->player->pos.y -= game->player->plane.y * game->move_speed;
-		else
-			game->player->pos = game->player->last_pos;
 		if (game->world_map[pos.x][pos.y] == '2')
+		{
 			if (game->door_open_ct >= 13)
 				game->player->pos.y -= game->player->plane.y * game->move_speed;
+		}
 	}
 }
 
@@ -118,8 +112,6 @@ void	ft_move_d(t_game *game)
 		if (game->world_map[pos.x][pos.y] != '1'
 			&& game->world_map[pos.x][pos.y] != '2')
 			game->player->pos.x += game->player->plane.x * game->move_speed;
-		else
-			game->player->pos = game->player->last_pos;
 		if (game->world_map[pos.x][pos.y] == '2')
 			if (game->door_open_ct >= 13)
 				game->player->pos.x += game->player->plane.x * game->move_speed;
@@ -129,11 +121,11 @@ void	ft_move_d(t_game *game)
 		if (game->world_map[pos.x][pos.y] != '1'
 			&& game->world_map[pos.x][pos.y] != '2')
 			game->player->pos.y += game->player->plane.y * game->move_speed;
-		else
-			game->player->pos = game->player->last_pos;
 		if (game->world_map[pos.x][pos.y] == '2')
+		{
 			if (game->door_open_ct >= 13)
 				game->player->pos.y += game->player->plane.y * game->move_speed;
+		}
 	}
 }
 
