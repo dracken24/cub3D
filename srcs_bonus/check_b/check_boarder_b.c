@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 23:03:48 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/14 03:59:56 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/19 11:28:01 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ void	ft_check_char(t_game *game)
 		}
 		if (game->world_map[game->ct.i][game->ct.k] == 'Z')
 		{
-			game->enemy0.pos.x = game->ct.k;
-			game->enemy0.pos.y = game->ct.i;
+			game->enemy0.pos.x = game->ct.k + 0.5f;
+			game->enemy0.pos.y = game->ct.i + 0.5f;
 		}
 		game->ct.k++;
 	}

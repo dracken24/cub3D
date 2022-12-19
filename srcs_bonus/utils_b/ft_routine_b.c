@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/13 11:45:20 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/19 12:51:18 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,15 @@ void	ft_all_routine(t_game *game, int *i)
 	ft_put_lifebar(game);
 	ft_choose_ammo(game);
 	ft_check_enemy_hit(game);
-	if (game->reload == 0)
-		ft_put_weapon(game);
-	ft_reload(game);
+	// if (game->reload == 0)
+		// ft_put_weapon(game);
+	// ft_reload(game);
 	draw_minimap(game);
 	ft_move_w(game);
 	ft_move_s(game);
 	ft_move_a(game);
 	ft_move_d(game);
+	game->player->last_pos = game->player->pos;
 }
 
 void	ft_routine_game(t_game *game, int i)
