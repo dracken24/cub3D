@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/14 04:08:23 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:40:29 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	ft_split_map(t_game *game, char *name)
 	fd = ft_open_fd(name, 1);
 	if (!fd)
 	{
-		printf("error, wrong open for <name>.ber\n");
+		printf("error, wrong open for <name>.cub\n");
 		exit(0);
 	}
 	ft_split_map_suite(game, fd);
@@ -78,6 +78,7 @@ void	*ft_run_mlx(void *arg)
 	game->mlx = mlx_init();
 	game->win = mlx_new_window(game->mlx, game->w, game->h, "BANKAI");
 	ft_init_imgs(game);
+	mlx_mouse_hide();
 	game->player = ft_init_player(game);
 	mlx_hook(game->win, 17, 0, x_quit, game);
 	mlx_loop_hook(game->mlx, ft_routine, game);

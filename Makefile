@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
+#    By: dantremb <dantremb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/19 16:09:57 by nadesjar          #+#    #+#              #
-#    Updated: 2022/12/14 03:27:23 by nadesjar         ###   ########.fr        #
+#    Updated: 2022/12/19 14:55:35 by dantremb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,28 +44,28 @@ PATH_UPD_B		= ./srcs_bonus/update_b/
 PATH_CHECK_B	= ./srcs_bonus/check_b/
 PATH_MENU_B		= ./srcs_bonus/menu_b/
 
-FILES_B 		= $(PATH_SRCS_B)cube_3d_b.c \
-				$(PATH_INIT_B)init_b.c $(PATH_INIT)read_xpm.c \
+FILES_B 		= $(PATH_SRCS_B)cube_3d_bonus.c \
+				$(PATH_INIT_B)init_bonus.c $(PATH_INIT)read_xpm.c \
 				$(PATH_INIT)read_xpm2.c  $(PATH_INIT)read_xpm3.c \
-				$(PATH_INIT_B)init_imgs_b.c  $(PATH_INIT_B)init_props_b.c \
-				$(PATH_INIT_B)threads_b.c  $(PATH_INIT_B)threads2_b.c \
-				$(PATH_MENU_B)menu_b.c \
-				$(PATH_KILL_B)kill_b.c $(PATH_KILL_B)free1_b.c \
-				$(PATH_DRAW_B)color_rgb_b.c $(PATH_DRAW_B)ammo_b.c \
-				$(PATH_DRAW_B)draw_minimap_b.c $(PATH_DRAW_B)faces_b.c \
-				$(PATH_DRAW_B)handgun_b.c $(PATH_DRAW_B)life_b.c \
-				$(PATH_DRAW_B)put_weapon_b.c $(PATH_DRAW_B)reload_handgun_b.c \
-				$(PATH_DRAW_B)reload_sniper_b.c $(PATH_DRAW_B)shotgun_knife_b.c \
-				$(PATH_DRAW_B)sniper_b.c \
-				$(PATH_CHECK_B)check_boarder_b.c $(PATH_CHECK_B)check_entry_b.c \
-				$(PATH_CHECK_B)check_suite_b.c \
-				$(PATH_MOVE_B)key_press_b.c $(PATH_MOVE_B)key_press2_b.c \
-				$(PATH_MOVE_B)mouse_control_b.c \
-				$(PATH_UTILS_B)utils_b.c $(PATH_UTILS_B)ft_routine_b.c \
-				$(PATH_UTILS_B)utils2_b.c \
-				$(PATH_UPD_B)raycast_door_01_b.c $(PATH_UPD_B)raycast_door_02_b.c \
-				$(PATH_UPD_B)raycast_enemy_b.c $(PATH_UPD_B)raycast_flortop_b.c \
-				$(PATH_UPD_B)raycast_01_b.c $(PATH_UPD_B)raycast_02_b.c \
+				$(PATH_INIT_B)init_imgs_bonus.c  $(PATH_INIT_B)init_props_bonus.c \
+				$(PATH_INIT_B)threads_bonus.c  $(PATH_INIT_B)threads2_bonus.c \
+				$(PATH_MENU_B)menu_bonus.c \
+				$(PATH_KILL_B)kill_bonus.c $(PATH_KILL_B)free1_bonus.c \
+				$(PATH_DRAW_B)color_rgb_bonus.c $(PATH_DRAW_B)ammo_bonus.c \
+				$(PATH_DRAW_B)draw_minimap_bonus.c $(PATH_DRAW_B)faces_bonus.c \
+				$(PATH_DRAW_B)handgun_bonus.c $(PATH_DRAW_B)life_bonus.c \
+				$(PATH_DRAW_B)put_weapon_bonus.c $(PATH_DRAW_B)reload_handgun_bonus.c \
+				$(PATH_DRAW_B)reload_sniper_bonus.c $(PATH_DRAW_B)shotgun_knife_bonus.c \
+				$(PATH_DRAW_B)sniper_bonus.c \
+				$(PATH_CHECK_B)check_boarder_bonus.c $(PATH_CHECK_B)check_entry_bonus.c \
+				$(PATH_CHECK_B)check_suite_bonus.c \
+				$(PATH_MOVE_B)key_press_bonus.c $(PATH_MOVE_B)key_press2_bonus.c \
+				$(PATH_MOVE_B)mouse_control_bonus.c \
+				$(PATH_UTILS_B)utils_bonus.c $(PATH_UTILS_B)ft_routine_bonus.c \
+				$(PATH_UTILS_B)utils2_bonus.c \
+				$(PATH_UPD_B)raycast_door_01_bonus.c $(PATH_UPD_B)raycast_door_02_bonus.c \
+				$(PATH_UPD_B)raycast_enemy_bonus.c $(PATH_UPD_B)raycast_flortop_bonus.c \
+				$(PATH_UPD_B)raycast_01_bonus.c $(PATH_UPD_B)raycast_02_bonus.c \
 
 OBJS_B 			= $(patsubst $(PATH_SRCS_B)%.c, $(PATH_OBJS_B)%.o, $(FILES_B))
 
@@ -80,8 +80,8 @@ MLX_LIB_LINUX	= minilibx/mlx-linux/libmlx.a
 MLX_LIB_MAC		= minilibx/opengl/libmlx.a
 LIBFT_A			= srcs/libft/libft.a
 
-NAME 			= cub_3D
-NAME_B			= cub_3D_bonus
+NAME 			= cub3D
+NAME_B			= cub3D_bonus
 
 all: signature $(LIBS) $(NAME)
 
