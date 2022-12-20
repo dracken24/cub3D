@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/19 17:38:41 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/20 11:38:27 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	mouse_move(int x, int y, t_game *game)
 		while (i < xx)
 		{
 			move_mouse_x(game, x);
-			if (i > 8)
+			if (i > 16)
 				break ;
 			i++;
 		}

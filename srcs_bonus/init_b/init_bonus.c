@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/19 17:46:51 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/20 11:38:39 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	ft_init_vars2(t_game *game)
 	game->w = SCREENW;
 	game->h = SCREENH;
 	game->move_speed = 0.3;
-	game->rot_speed = 0.03;
+	game->rot_speed = 0.015;
 	game->gun = 1;
 	game->rotate_gun = 1;
 }

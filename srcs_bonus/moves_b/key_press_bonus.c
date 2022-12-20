@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_press_b.c                                      :+:      :+:    :+:   */
+/*   key_press_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/19 13:45:34 by nadesjar         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:48:42 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,10 @@ bool	hit_box(t_game *game)
 	bool	collision;
 
 	collision = false;
-	if ((game->player->pos.y < (game->enemy0.pos.x + 0.35f)
-			&& (game->player->pos.y + 0.35f) > game->enemy0.pos.x)
-		&& (game->player->pos.x < (game->enemy0.pos.y + 0.35f)
-			&& (game->player->pos.x + 0.35f) > game->enemy0.pos.y))
+	if ((game->player->pos.y < (game->enemy0.pos.x + 0.30f)
+			&& (game->player->pos.y + 0.30f) > game->enemy0.pos.x)
+		&& (game->player->pos.x < (game->enemy0.pos.y + 0.30f)
+			&& (game->player->pos.x + 0.30f) > game->enemy0.pos.y))
 		collision = true;
 	return (collision);
 }
