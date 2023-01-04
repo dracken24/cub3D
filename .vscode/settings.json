@@ -5,6 +5,7 @@
         "mlx.h": "c",
         "cube3d.h": "c",
         "chrono": "c",
-        "stddef.h": "c"
+        "stddef.h": "c",
+        "cube3d_bonus.h": "c"
     }
 }

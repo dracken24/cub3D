@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:44:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/19 13:44:16 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/04 13:30:35 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -283,7 +283,7 @@ void	ft_split_xpm_save_colors_suite(t_xpm *xpm, int i, int k);
 void	ft_split_xpm_save_colors(t_xpm *xpm, int i);
 void	ft_load_texture(t_game *game, char *temp);
 void	ft_init_reload_handgun(t_game *game);
-void	ft_init_logo(t_xpm *img, char *name);
+void	ft_init_logo(t_game *game, t_xpm *img, char *name);
 void	ft_start_threads(t_game *game);
 void	ft_init_shotgun(t_game *game);
 void	ft_end_threads(t_game *game);
@@ -352,12 +352,12 @@ void	ft_sniper_zoom_out(t_game *game, int *i, int *k);
 void	ft_sniper_anim_end(t_game *game, int *i, int *k);
 void	ft_zoom_out_sniper2(t_game *game, int *k);
 void	ft_zoom_out_sniper1(t_game *game, int *k);
-void	ft_init_colors(t_xpm *xpm, int ct);
+void	ft_init_colors(t_game *game, t_xpm *xpm, int ct);
 void	ft_put_weapon_logo(t_game *game);
-void	ft_load_xpm(t_xpm *img, int fd);
+void	ft_load_xpm(t_game *game, t_xpm *img, int fd);
 void	ft_read_xpm(t_xpm *xpm, int fd);
 void	ft_reload_sniper(t_game *game);
-void	ft_init_floor_top(t_xpm *xpm);
+void	ft_init_floor_top(t_game *game, t_xpm *xpm);
 void	ft_choose_ammo(t_game *game);
 void	ft_put_lifebar(t_game *game);
 void	ft_put_weapon(t_game *game);
@@ -365,7 +365,7 @@ void	ft_put_faces(t_game *game);
 void	draw_minimap(t_game *game);
 void	ft_put_menu(t_game *game);
 void	draw_cursor(t_game *game);
-void	ft_split_xpm(t_xpm *xpm);
+void	ft_split_xpm(t_game *game, t_xpm *xpm);
 void	ft_reload(t_game *game);
 void	ft_skulls(t_game *game);
 

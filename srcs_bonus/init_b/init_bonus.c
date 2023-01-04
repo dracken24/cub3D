@@ -6,29 +6,29 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/20 11:38:39 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/04 13:46:19 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes_bonus/cube3d_bonus.h"
 
-void	ft_init_colors(t_xpm *xpm, int ct)
+void	ft_init_colors(t_game *game, t_xpm *xpm, int ct)
 {
 	int		fd;
 
 	xpm->name[ft_strlen(xpm->name) - 1] = '\0';
 	fd = open(xpm->name, O_RDONLY, 0644);
-	if (!fd)
+	if (fd < 0)
 	{
 		printf("error, wrong open <init color>\n");
-		exit(0);
+		x_quit(game);
 	}
 	if (ct == 1)
-		ft_split_xpm(xpm);
+		ft_split_xpm(game, xpm);
 	close(fd);
 }
 
-void	ft_init_floor_top(t_xpm *xpm)
+void	ft_init_floor_top(t_game *game, t_xpm *xpm)
 {
 	char	**tmp;
 
@@ -36,7 +36,7 @@ void	ft_init_floor_top(t_xpm *xpm)
 	if (!tmp)
 	{
 		printf("error, wrong alloc <init floor>\n");
-		exit(0);
+		x_quit(game);
 	}
 	xpm->rgb.r = ft_atoi(tmp[0]);
 	xpm->rgb.g = ft_atoi(tmp[1]);
@@ -90,6 +90,6 @@ void	init_vars(t_game *game)
 	if (!game->ray || ! game->all_ray)
 	{
 		printf("error, wrong malloc");
-		exit(0);
+		x_quit(game);
 	}
 }

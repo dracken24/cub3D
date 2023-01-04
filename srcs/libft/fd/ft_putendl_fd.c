@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 11:01:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/05/07 00:05:21 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/04 12:17:59 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putendl_fd(char *str, int fd)
 {
 	int	len;
 
-	if (!str || !fd)
+	if (!str || fd <= 0)
 		return ;
 	len = ft_strlen(str);
 	if (str)

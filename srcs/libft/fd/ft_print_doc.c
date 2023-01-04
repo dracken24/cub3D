@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 11:36:42 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/09/06 11:44:54 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/04 12:23:15 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	ft_print_doc(char *str)
 	while (line)
 	{
 		ft_putstr_fd(line, 1);
-		free(line);
+		ft_free(line);
 		line = get_next_line(fd);
 	}
 	close(fd);
-	free(line);
+	ft_free(line);
 }

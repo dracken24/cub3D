@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/01 18:50:05 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/04 12:19:12 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	ft_imgs_load(t_xpm *xpm, int k)
 	return (k);
 }
 
-void	ft_split_color_xpm(t_xpm *xpm)
+void	ft_split_color_xpm(t_game *game, t_xpm *xpm)
 {
 	int	i;
 
@@ -68,7 +68,7 @@ void	ft_split_color_xpm(t_xpm *xpm)
 	if (!xpm->colors || !xpm->all_colors)
 	{
 		printf("error, wrong alloc <ft_split_xpm>\n");
-		exit(0);
+		x_quit(game);
 	}
 	if (ft_strnstr(xpm->cpy_fd[2], "pixel", ft_strlen(xpm->cpy_fd[2])))
 		i = 3;
@@ -86,7 +86,7 @@ void	ft_split_color_xpm(t_xpm *xpm)
 	}
 }
 
-void	ft_split_xpm(t_xpm *xpm)
+void	ft_split_xpm(t_game *game, t_xpm *xpm)
 {
 	static int	k;
 	int			fd;
@@ -94,13 +94,13 @@ void	ft_split_xpm(t_xpm *xpm)
 	if (!k)
 		k = 0;
 	fd = ft_open_fd(xpm->name, 1);
-	if (!fd)
+	if (fd < 0)
 	{
 		printf("error, wrong fd <ft_split_xpm>\n");
-		exit(0);
+		x_quit(game);
 	}
-	ft_read_xpm(xpm, fd);
+	ft_read_xpm(game, xpm, fd);
 	close(fd);
-	ft_split_color_xpm(xpm);
+	ft_split_color_xpm(game, xpm);
 	k = ft_imgs_load(xpm, k);
 }

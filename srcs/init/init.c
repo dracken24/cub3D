@@ -6,29 +6,29 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/09 13:00:20 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/04 12:17:09 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cube3d.h"
 
-void	ft_init_colors(t_xpm *xpm, int ct)
+void	ft_init_colors(t_game *game, t_xpm *xpm, int ct)
 {
 	int		fd;
 
 	xpm->name[ft_strlen(xpm->name) - 1] = '\0';
 	fd = open(xpm->name, O_RDONLY, 0644);
-	if (!fd)
+	if (fd < 0)
 	{
 		printf("error, wrong open <init color>\n");
-		exit(0);
+		x_quit(game);
 	}
 	if (ct == 1)
-		ft_split_xpm(xpm);
+		ft_split_xpm(game, xpm);
 	close(fd);
 }
 
-void	ft_init_floor_top(t_xpm *xpm)
+void	ft_init_floor_top(t_game *game, t_xpm *xpm)
 {
 	char	**tmp;
 
@@ -36,7 +36,7 @@ void	ft_init_floor_top(t_xpm *xpm)
 	if (!tmp)
 	{
 		printf("error, wrong alloc <init floor>\n");
-		exit(0);
+		x_quit(game);
 	}
 	xpm->rgb.r = ft_atoi(tmp[0]);
 	xpm->rgb.g = ft_atoi(tmp[1]);
@@ -79,18 +79,18 @@ void	init_vars(t_game *game)
 	if (!game->ray)
 	{
 		printf("error, wrong malloc");
-		exit(0);
+		x_quit(game);
 	}
 }
 
 void	ft_init_imgs(t_game *game)
 {
-	ft_init_colors(&game->imgs.texture_n, 1);
-	ft_init_colors(&game->imgs.texture_s, 1);
-	ft_init_colors(&game->imgs.texture_e, 1);
-	ft_init_colors(&game->imgs.texture_w, 1);
-	ft_init_floor_top(&game->imgs.top);
-	ft_init_floor_top(&game->imgs.down);
+	ft_init_colors(game, &game->imgs.texture_n, 1);
+	ft_init_colors(game, &game->imgs.texture_s, 1);
+	ft_init_colors(game, &game->imgs.texture_e, 1);
+	ft_init_colors(game, &game->imgs.texture_w, 1);
+	ft_init_floor_top(game, &game->imgs.top);
+	ft_init_floor_top(game, &game->imgs.down);
 	game->imgs.img.img = mlx_new_image(game->mlx, game->w, game->h);
 	game->imgs.img.name = mlx_get_data_addr(game->imgs.img.img,
 			&game->bpp, &game->pixel, &game->endian);

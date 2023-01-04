@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 19:49:33 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/11/01 13:36:52 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/04 12:22:25 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	check_entry(t_game *game, int entry, char *name)
 	if (entry != 2)
 	{
 		perror("Error, Wrong arguments numbers\n");
-		exit(0);
+		x_quit(game);
 	}
 	map_read(game, name);
 	map_size(game);
@@ -46,9 +46,9 @@ void	map_read(t_game *game, char *name)
 	game->tmp = ft_calloc(sizeof(char *), (TILESIZE) + 1);
 	if (!game->tmp)
 	{
-		free(game->tmp);
+		// free(game->tmp);
 		perror("Error, wrong malloc <map_0>");
-		exit(0);
+		x_quit(game);
 	}
 	fd = open(name, O_RDONLY, 0644);
 	game->ct.i = -1;
@@ -80,10 +80,10 @@ void	save_map(t_game *game)
 	game->world_map = ft_calloc(sizeof(char *), game->len.len_y + 1);
 	if (!game->world_map)
 	{
-		free(game->world_map);
-		free(game->tmp);
+		// free(game->world_map);
+		// free(game->tmp);
 		perror("Error, wrong malloc <map>\n");
-		exit(0);
+		x_quit(game);
 	}
 	game->ct.i = -1;
 	while (++game->ct.i < game->len.len_y)

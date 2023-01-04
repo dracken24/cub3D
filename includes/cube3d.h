@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:44:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/14 03:59:06 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/04 12:09:38 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -198,11 +198,11 @@ void	ft_print_sprite(t_game *game, t_xpm *img,
 void	ft_init_sprites(t_game *game, t_xpm *imgs, char *name, int ct);
 void	draw_color(t_game *game, char *img, t_vector2 pos, int color);
 void	ft_draw_line(t_game *game, int line_height, t_ray *ray);
-void	ft_init_colors(t_xpm *xpm, int ct);
+void	ft_init_colors(t_game *game, t_xpm *xpm, int ct);
 void	ft_load_xpm(t_xpm *img, int fd);
-void	ft_read_xpm(t_xpm *xpm, int fd);
-void	ft_init_floor_top(t_xpm *xpm);
-void	ft_split_xpm(t_xpm *xpm);
+void	ft_read_xpm(t_game *game, t_xpm *xpm, int fd);
+void	ft_init_floor_top(t_game *game, t_xpm *xpm);
+void	ft_split_xpm(t_game *game, t_xpm *xpm);
 
 int		get_img_color(t_xpm *img, int x, int y);
 int		create_trgb(int t, int r, int g, int b);
