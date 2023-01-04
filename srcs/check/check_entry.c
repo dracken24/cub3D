@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 19:49:33 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/04 12:22:25 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/04 13:58:40 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ void	map_read(t_game *game, char *name)
 	game->tmp = ft_calloc(sizeof(char *), (TILESIZE) + 1);
 	if (!game->tmp)
 	{
-		// free(game->tmp);
 		perror("Error, wrong malloc <map_0>");
 		x_quit(game);
 	}
@@ -80,8 +79,6 @@ void	save_map(t_game *game)
 	game->world_map = ft_calloc(sizeof(char *), game->len.len_y + 1);
 	if (!game->world_map)
 	{
-		// free(game->world_map);
-		// free(game->tmp);
 		perror("Error, wrong malloc <map>\n");
 		x_quit(game);
 	}

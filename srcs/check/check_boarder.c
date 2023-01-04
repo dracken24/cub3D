@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 23:03:48 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/04 12:21:45 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/04 13:58:32 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,12 @@ void	check_board(t_game *game)
 	ft_check_double(game);
 	if (game->ct.error == -2)
 	{
-		// free(game->world_map);
 		perror("Error, to much/less start spot <NSEW>\n");
 		x_quit(game);
 	}
 	check_boarder_01(game);
 	if (game->ct.error == 0)
 	{
-		// free(game->world_map);
 		perror("Error, Boarder not ok\n");
 		x_quit(game);
 	}

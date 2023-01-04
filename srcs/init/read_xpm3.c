@@ -6,15 +6,16 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:29:03 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/04 12:09:14 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/04 14:17:38 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cube3d.h"
 
-void	ft_init_lens_suite(t_game *game, t_xpm *xpm, int ct, int i, int k)
+void	ft_init_lens_suite(t_game *game, t_xpm *xpm, int ct, int k)
 {
 	char	*tmp;
+	int		i;
 
 	tmp = ft_calloc(sizeof(char), 5);
 	if (!tmp)
@@ -22,6 +23,7 @@ void	ft_init_lens_suite(t_game *game, t_xpm *xpm, int ct, int i, int k)
 		printf("error, wrong alloc <init_lens>\n");
 		x_quit(game);
 	}
+	i = 0;
 	while (xpm->cpy_fd[ct][++i] != ' ')
 		tmp[++k] = xpm->cpy_fd[ct][i];
 	xpm->len_x = ft_atoi(tmp);
@@ -35,7 +37,6 @@ void	ft_init_lens_suite(t_game *game, t_xpm *xpm, int ct, int i, int k)
 
 void	ft_init_lens(t_game *game, t_xpm *xpm)
 {
-	int		i;
 	int		k;
 	int		ct;
 
@@ -43,10 +44,9 @@ void	ft_init_lens(t_game *game, t_xpm *xpm)
 		ct = 3;
 	else
 		ct = 2;
-	i = 0;
 	k = -1;
 	if (xpm->cpy_fd[ct])
-		ft_init_lens_suite(game, xpm, ct, i, k);
+		ft_init_lens_suite(game, xpm, ct, k);
 }
 
 void	ft_read_xpm(t_game *game, t_xpm *xpm, int fd)
