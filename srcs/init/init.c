@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/04 12:17:09 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/17 16:03:43 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,23 @@ void	ft_init_floor_top(t_game *game, t_xpm *xpm)
 {
 	char	**tmp;
 
+	if (xpm->name[ft_strlen(xpm->name) - 1] == '\n')
+		xpm->name[ft_strlen(xpm->name) - 1] = '\0';
 	tmp = ft_split(xpm->name, ',');
-	if (!tmp)
+	if (!tmp || !ft_str_is_num(tmp[0]) || !ft_str_is_num(tmp[1]) || !ft_str_is_num(tmp[2]))
 	{
-		printf("error, wrong alloc <init floor>\n");
+		printf("error, color miss or not num\n");
 		x_quit(game);
 	}
 	xpm->rgb.r = ft_atoi(tmp[0]);
 	xpm->rgb.g = ft_atoi(tmp[1]);
 	xpm->rgb.b = ft_atoi(tmp[2]);
+	if (xpm->rgb.r > 255 || xpm->rgb.r < 0 || xpm->rgb.g > 255
+		|| xpm->rgb.g < 0 || xpm->rgb.b > 255 || xpm->rgb.b < 0)
+	{
+		printf("error, color over 255 or less than 0\n");
+		x_quit(game);
+	}
 	xpm->coll = create_trgb(0, xpm->rgb.r, xpm->rgb.g, xpm->rgb.b);
 	ft_free_ptr((void *)tmp);
 }

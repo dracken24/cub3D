@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:44:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/04 12:09:38 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/17 16:12:56 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,13 +145,17 @@ void	check_char(t_game *game);
 void	save_map(t_game *game);
 void	map_size(t_game *game);
 
-int		ft_check_set(int c, const char *set);
+bool	ft_valid_map(char *line);
+bool	ft_str_is_num(char *str);
+
+int		ft_check_set(char c, const char *set);
 int		check_name(char *name);
 
 /***************************** Utility *****************************/
 
 int		ft_charcmp(unsigned char a, unsigned char b);
 int		ft_convert_bits(t_byte *raw);
+void	ft_replace_or_load(char **texture, char *temp);
 
 /**************************** Init game ****************************/
 

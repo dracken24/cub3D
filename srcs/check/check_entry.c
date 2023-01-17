@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 19:49:33 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/04 13:58:40 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/09 14:43:23 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ void	map_read(t_game *game, char *name)
 		game->tmp[game->ct.i] = get_next_line(fd);
 		if (!game->tmp[game->ct.i])
 			break ;
+		if (ft_valid_map(game->tmp[game->ct.i]))
+			x_quit(game);
 	}
 	game->len.len_y = game->ct.i;
 }

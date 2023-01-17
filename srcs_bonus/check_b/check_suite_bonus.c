@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_suite_b.c                                    :+:      :+:    :+:   */
+/*   check_suite_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
+/*   By: dantremb <dantremb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 23:03:48 by nadesjar          #+#    #+#             */
-/*   Updated: 2022/12/07 01:58:59 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/09 15:35:16 by dantremb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,20 @@ void	ft_check_double(t_game *game)
 	}
 	if (ct != 1)
 		game->ct.error = -2;
+}
+
+bool	ft_valid_map(char *line)
+{
+	int	i;
+
+	i = -1;
+	while (line[++i])
+	{
+		if (!ft_strchr("0127ZNSEW \n", line[i]))
+		{
+			printf("Error, invalid letter in map.\n");
+			return (true);
+		}
+	}
+	return (false);
 }

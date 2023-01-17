@@ -6,16 +6,16 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:44:15 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/04 13:30:35 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/17 16:05:29 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE3D_BONUS_H
 # define CUBE3D_BONUS_H
 
+//# include "../minilibx/MLX42/include/MLX42/MLX42_int.h"
+//# include "../minilibx/mlx-linux/mlx.h"
 # include "../srcs/libft/libft.h"
-// # include "../minilibx/MLX42/include/MLX42/MLX42_int.h"
-// # include "../minilibx/mlx-linux/mlx.h"
 # include "../minilibx/opengl/mlx.h"
 # include "imgs_bonus.h"
 # include <math.h>
@@ -260,11 +260,15 @@ void	map_size(t_game *game);
 int		ft_check_set(int c, const char *set);
 int		check_name(char *name);
 
+bool	ft_valid_map(char *line);
+bool	ft_str_is_num(char *str);
+
 /***************************** Utility *****************************/
 
 void	ft_check_moves(t_game *game, int x);
 void	ft_check_enemy_hit(t_game *game);
 void	ft_open_door(t_game *game);
+void	ft_replace_or_load(char **texture, char *temp);
 
 int		ft_charcmp(unsigned char a, unsigned char b);
 int		ft_convert_bits(t_byte *raw);

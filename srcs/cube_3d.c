@@ -6,12 +6,13 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/04 12:42:48 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/17 15:32:47 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cube3d.h"
 #include "../includes/control.h"
+#include "libft/gnl/gnl.h"
 
 void	ft_clean_map(int fd)
 {
@@ -22,32 +23,37 @@ void	ft_clean_map(int fd)
 	if (fdsave < 0)
 		return ;
 	tmp = get_next_line(fd);
+	while (tmp && (tmp[0] == '\n' || ft_is_only(tmp, ' ', ft_strlen(tmp))))
+	{
+		ft_free(tmp);
+		tmp = get_next_line(fd);
+	}
 	while (tmp)
 	{
-		if (tmp[0] != '\n' && !ft_is_only(tmp, ' ', ft_strlen(tmp) - 2))
-			ft_putstr_fd(tmp, fdsave);
+		ft_putstr_fd(tmp, fdsave);
 		ft_free(tmp);
 		tmp = get_next_line(fd);
 	}
 	close(fdsave);
 }
 
-void	ft_split_map_suite(t_game *game, int fd)
+int	ft_split_map_suite(t_game *game, int fd)
 {
 	char	*tmp;
 
 	tmp = get_next_line(fd);
 	while (tmp)
 	{
-		if (tmp[0] != '\n' && !ft_is_only(tmp, ' ', ft_strlen(tmp) - 2))
+		if (tmp[0] != '\n' && !ft_is_only(tmp, ' ', ft_strlen(tmp)))
 			ft_load_texture(game, ft_trim_token(tmp, ' '));
 		ft_free(tmp);
 		if (game->imgs.texture_n.name && game->imgs.texture_s.name
 			&& game->imgs.texture_w.name && game->imgs.texture_e.name
 			&& game->imgs.down.name && game->imgs.top.name)
-			break ;
+			return (0);
 		tmp = get_next_line(fd);
 	}
+	return (1);
 }
 
 void	ft_split_map(t_game *game, char *name)
@@ -65,7 +71,12 @@ void	ft_split_map(t_game *game, char *name)
 		printf("error, wrong open for <name>.cub\n");
 		x_quit(game);
 	}
-	ft_split_map_suite(game, fd);
+	if (ft_split_map_suite(game, fd))
+	{
+		printf("Error, missing map data <name>.cub\n");
+		close(fd);
+		x_quit(game);
+	}
 	ft_clean_map(fd);
 	close(fd);
 }
@@ -92,10 +103,15 @@ int	main(int entry, char **name)
 {
 	t_game	game;
 
-	ft_memset(&game, 0, sizeof(t_game));
-	ft_split_map(&game, name[1]);
-	check_entry(&game, entry, "tmp.cub");
-	init_vars(&game);
-	ft_run_mlx(&game);
+	if (entry == 2)
+	{
+		ft_memset(&game, 0, sizeof(t_game));
+		ft_split_map(&game, name[1]);
+		check_entry(&game, entry, "tmp.cub");
+		init_vars(&game);
+		ft_run_mlx(&game);
+	}
+	else
+		printf("Please enter a valid map name.\n");
 	return (0);
 }

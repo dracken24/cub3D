@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 23:03:48 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/04 13:58:32 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/17 16:16:59 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,22 +63,28 @@ void	check_char(t_game *game)
 		game->ct.error = 0;
 	if (!ft_check_set(game->world_map[game->ct.i - 1][game->ct.k], "NSEW10"))
 		game->ct.error = 0;
-	if (!ft_check_set(game->world_map[game->ct.i + 1][game->ct.k], "NSEW10"))
+	if (game->world_map[game->ct.i + 1] && !ft_check_set(game->world_map[game->ct.i + 1][game->ct.k], "NSEW10"))
 		game->ct.error = 0;
 }
 
 void	ft_load_texture(t_game *game, char *temp)
 {
+	printf("temp: %s\n", temp);
 	if (ft_strncmp(temp, "NO", 2) == 0)
-		game->imgs.texture_n.name = ft_strdup(ft_trim_token(temp + 2, ' '));
+		ft_replace_or_load(&game->imgs.texture_n.name, temp + 2);
 	else if (ft_strncmp(temp, "SO", 2) == 0)
-		game->imgs.texture_s.name = ft_strdup(ft_trim_token(temp + 2, ' '));
+		ft_replace_or_load(&game->imgs.texture_s.name, temp + 2);
 	else if (ft_strncmp(temp, "WE", 2) == 0)
-		game->imgs.texture_w.name = ft_strdup(ft_trim_token(temp + 2, ' '));
+		ft_replace_or_load(&game->imgs.texture_w.name, temp + 2);
 	else if (ft_strncmp(temp, "EA", 2) == 0)
-		game->imgs.texture_e.name = ft_strdup(ft_trim_token(temp + 2, ' '));
+		ft_replace_or_load(&game->imgs.texture_e.name, temp + 2);
 	else if (ft_strncmp(temp, "F", 1) == 0)
-		game->imgs.down.name = ft_strdup(ft_trim_token(temp + 1, ' '));
+		ft_replace_or_load(&game->imgs.down.name, temp + 1);
 	else if (ft_strncmp(temp, "C", 1) == 0)
-		game->imgs.top.name = ft_strdup(ft_trim_token(temp + 1, ' '));
+		ft_replace_or_load(&game->imgs.top.name, temp + 1);
+	else
+	{
+		printf("Error, wrong texture\n");
+		x_quit(game);
+	}
 }

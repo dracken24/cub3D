@@ -6,7 +6,7 @@
 #    By: dantremb <dantremb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/19 16:09:57 by nadesjar          #+#    #+#              #
-#    Updated: 2022/12/19 14:55:35 by dantremb         ###   ########.fr        #
+#    Updated: 2023/01/09 07:49:02 by dantremb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -127,7 +127,7 @@ $(PATH_OBJS_B)%.o:	$(PATH_SRCS_B)%.c
 	@printf "$G■"
 
 make_lib:
-	@$(MAKE) -C ./srcs/libft
+	@$(MAKE) -s -C ./srcs/libft
 
 msg_in:
 	@echo $L"COMPILATION DE Cub_3D EN COURS..."$W
