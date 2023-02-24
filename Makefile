@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dantremb <dantremb@student.42.fr>          +#+  +:+       +#+         #
+#    By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/19 16:09:57 by nadesjar          #+#    #+#              #
-#    Updated: 2023/01/09 07:49:02 by dantremb         ###   ########.fr        #
+#    Updated: 2023/01/24 16:46:44 by nadesjar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,9 +83,9 @@ LIBFT_A			= srcs/libft/libft.a
 NAME 			= cub3D
 NAME_B			= cub3D_bonus
 
-all: signature $(LIBS) $(NAME)
+all: signature msg_in $(LIBS) $(NAME) msg_out
 
-$(NAME): msg_in $(OBJS) msg_out
+$(NAME): $(OBJS)
 	@cp $(MLX_LIB_MAC) $(NAME)
 	@gcc $(OBJS) $(MLX_LIB_MAC) $(LIBFT_A) $(MLXFLAG_MAC) -o $(NAME)
 # @./$(NAME) ./maps/test_mandatory.cub

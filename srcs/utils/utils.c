@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/17 16:12:44 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/24 17:06:56 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_check_set(char c, const char *set)
 	i = 0;
 	while (c && set && set[i])
 	{
-		printf("set = %c\n", c);
 		if (set[i++] == c)
 			return (true);
 	}
@@ -54,4 +53,16 @@ bool	ft_str_is_num(char *str)
 		i++;
 	}
 	return (true);
+}
+
+void	map_size(t_game *game)
+{
+	game->ct.map_size = 0;
+	game->ct.i = -1;
+	while (game->tmp[++game->ct.i])
+	{
+		game->ct.k = -1;
+		while (game->tmp[game->ct.i][++game->ct.k])
+			game->ct.map_size += 1;
+	}
 }

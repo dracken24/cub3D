@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mouse_control_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dantremb <dantremb@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/09 07:52:38 by dantremb         ###   ########.fr       */
+/*   Updated: 2023/01/24 17:29:11 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int	mouse_move(int x, int y, t_game *game)
 	int	xx;
 	int	i;
 
-	mlx_mouse_hide();
 	i = 0;
 	xx = x - game->last.x;
 	if (xx < 0)

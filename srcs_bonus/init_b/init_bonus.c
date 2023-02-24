@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 11:43:17 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/17 16:05:07 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/24 17:13:48 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ void	ft_init_floor_top(t_game *game, t_xpm *xpm)
 	if (xpm->name[ft_strlen(xpm->name) - 1] == '\n')
 		xpm->name[ft_strlen(xpm->name) - 1] = '\0';
 	tmp = ft_split(xpm->name, ',');
-	if (!tmp || !ft_str_is_num(tmp[0]) || !ft_str_is_num(tmp[1]) || !ft_str_is_num(tmp[2]))
+	if (!tmp || !ft_str_is_num(tmp[0]) || !ft_str_is_num(tmp[1])
+		|| !ft_str_is_num(tmp[2]))
 	{
 		printf("error, color miss or not num\n");
 		x_quit(game);

@@ -1,14 +1,3 @@
-NO ./pics/walls/wall_04.xpm
-
-SO    ./pics/walls/wall_06.xpm
-WE        ./pics/walls/wall_07.xpm
-EA ./pics/walls/wall_14.xpm
-
-F 80,80,80
-
-
-    C 110,35,34
-
 1111111111111111111111
 10000000000000000000001
 10111111111111111111101

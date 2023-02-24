@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 23:03:48 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/17 15:03:30 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/24 17:12:41 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,11 @@ void	check_boarder_01(t_game *game)
 
 void	check_char(t_game *game)
 {
+	if (game->ct.k == 0 || game->ct.i == 0 || game->ct.i == game->len.len_y - 1)
+	{
+		game->ct.error = 0;
+		return ;
+	}
 	if (!ft_check_set(game->world_map[game->ct.i][game->ct.k - 1],
 		"NSEWB1270Z"))
 		game->ct.error = 0;

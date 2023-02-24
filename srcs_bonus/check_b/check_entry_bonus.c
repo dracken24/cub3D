@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_entry_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dantremb <dantremb@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 19:49:33 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/09 15:37:10 by dantremb         ###   ########.fr       */
+/*   Updated: 2023/01/24 17:25:53 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void	map_read(t_game *game, char *name)
 {
 	int	fd;
 
+	game->len.max_len_x = 0;
 	game->tmp = ft_calloc(sizeof(char *), TILESIZE);
 	if (!game->tmp)
 	{
@@ -57,27 +58,29 @@ void	map_read(t_game *game, char *name)
 		game->tmp[game->ct.i] = get_next_line(fd);
 		if (!game->tmp[game->ct.i])
 			break ;
+		if (game->len.max_len_x < (int)ft_strlen(game->tmp[game->ct.i]))
+			game->len.max_len_x = (int)ft_strlen(game->tmp[game->ct.i]);
 		if (ft_valid_map(game->tmp[game->ct.i]))
 			x_quit(game);
 	}
 	game->len.len_y = game->ct.i;
 }
 
-void	map_size(t_game *game)
+void	save_map_suite(t_game *game)
 {
-	game->ct.map_size = 0;
-	game->ct.i = -1;
-	while (game->tmp[++game->ct.i])
+	while (ft_is_only(game->world_map[game->ct.i - 1], ' ',
+			ft_strlen(game->world_map[game->ct.i - 1])))
 	{
-		game->ct.k = -1;
-		while (game->tmp[game->ct.i][++game->ct.k])
-			game->ct.map_size += 1;
+		ft_free(game->world_map[game->ct.i - 1]);
+		game->world_map[game->ct.i - 1] = NULL;
+		game->ct.i -= 1;
+		game->len.len_y -= 1;
 	}
 }
 
 void	save_map(t_game *game)
 {
-	int	len;
+	int		len;
 
 	game->world_map = ft_calloc(sizeof(char *), game->len.len_y + 1);
 	if (!game->world_map)
@@ -89,11 +92,14 @@ void	save_map(t_game *game)
 	while (++game->ct.i < game->len.len_y)
 	{
 		len = ft_strlen(game->tmp[game->ct.i]);
-		game->world_map[game->ct.i] = ft_strdup(game->tmp[game->ct.i]);
+		game->world_map[game->ct.i] = ft_calloc(sizeof(char),
+				game->len.max_len_x + 1);
+		ft_strlcat(game->world_map[game->ct.i], game->tmp[game->ct.i], len + 1);
 		game->world_map[game->ct.i][len - 1] = '\0';
 		if (len > game->len.max_len_x)
 			game->len.max_len_x = len - 1;
 		printf("%s\n", game->world_map[game->ct.i]);
 	}
+	save_map_suite(game);
 	ft_free_ptr((void *)game->tmp);
 }

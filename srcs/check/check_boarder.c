@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_boarder.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
+/*   By: dantremb <dantremb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 23:03:48 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/17 16:16:59 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/24 19:22:15 by dantremb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,19 +57,24 @@ void	check_boarder_01(t_game *game)
 
 void	check_char(t_game *game)
 {
+	if (game->ct.k == 0 || game->ct.i == 0 || game->ct.i == game->len.len_y - 1)
+	{
+		game->ct.error = 0;
+		return ;
+	}
 	if (!ft_check_set(game->world_map[game->ct.i][game->ct.k - 1], "NSEW10"))
 		game->ct.error = 0;
 	if (!ft_check_set(game->world_map[game->ct.i][game->ct.k + 1], "NSEW10"))
 		game->ct.error = 0;
 	if (!ft_check_set(game->world_map[game->ct.i - 1][game->ct.k], "NSEW10"))
 		game->ct.error = 0;
-	if (game->world_map[game->ct.i + 1] && !ft_check_set(game->world_map[game->ct.i + 1][game->ct.k], "NSEW10"))
+	if (game->world_map[game->ct.i + 1] && !ft_check_set(game->world_map
+			[game->ct.i + 1][game->ct.k], "NSEW10"))
 		game->ct.error = 0;
 }
 
 void	ft_load_texture(t_game *game, char *temp)
 {
-	printf("temp: %s\n", temp);
 	if (ft_strncmp(temp, "NO", 2) == 0)
 		ft_replace_or_load(&game->imgs.texture_n.name, temp + 2);
 	else if (ft_strncmp(temp, "SO", 2) == 0)

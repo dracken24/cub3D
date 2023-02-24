@@ -6,7 +6,7 @@
 /*   By: nadesjar <dracken24@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 20:52:57 by nadesjar          #+#    #+#             */
-/*   Updated: 2023/01/04 13:22:29 by nadesjar         ###   ########.fr       */
+/*   Updated: 2023/01/24 17:14:11 by nadesjar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,16 @@ void	ft_end_threads(t_game *game)
 		return ;
 	if (pthread_join(game->load_imgs6[0], NULL) != 0)
 		return ;
+}
+
+void	map_size(t_game *game)
+{
+	game->ct.map_size = 0;
+	game->ct.i = -1;
+	while (game->tmp[++game->ct.i])
+	{
+		game->ct.k = -1;
+		while (game->tmp[game->ct.i][++game->ct.k])
+			game->ct.map_size += 1;
+	}
 }
