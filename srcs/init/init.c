@@ -83,7 +83,7 @@ void	init_vars(t_game *game)
 	game->h = SCREENH;
 	game->ct.error2 = 0;
 	game->move_speed = 0.15;
-	game->rot_speed = 0.05;
+	game->rot_speed = 0.005;
 	game->ray = malloc(sizeof(t_ray));
 	if (!game->ray)
 	{

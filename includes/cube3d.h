@@ -15,8 +15,8 @@
 
 # include "../srcs/libft/libft.h"
 // # include "../minilibx/MLX42/include/MLX42/MLX42_int.h"
-// # include "../minilibx/mlx-linux/mlx.h"
-# include "../minilibx/opengl/mlx.h"
+# include "../minilibx/minilibx-linux/mlx.h"
+// # include "../minilibx/opengl/mlx.h"
 # include "imgs.h"
 # include <math.h>
 # include <stdbool.h>

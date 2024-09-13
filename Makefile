@@ -76,7 +76,7 @@ MLXFLAG_MAC 	= -framework OpenGl -framework Cocoa
 MLXFLAG_LINUX	= -lbsd -lXext -lX11 -lm
 
 LIBS			= make_lib
-MLX_LIB_LINUX	= minilibx/mlx-linux/libmlx.a
+MLX_LIB_LINUX	= minilibx/minilibx-linux/libmlx.a
 MLX_LIB_MAC		= minilibx/opengl/libmlx.a
 LIBFT_A			= srcs/libft/libft.a
 
@@ -86,8 +86,8 @@ NAME_B			= cub3D_bonus
 all: signature msg_in $(LIBS) $(NAME) msg_out
 
 $(NAME): $(OBJS)
-	@cp $(MLX_LIB_MAC) $(NAME)
-	@gcc $(OBJS) $(MLX_LIB_MAC) $(LIBFT_A) $(MLXFLAG_MAC) -o $(NAME)
+	@cp $(MLX_LIB_LINUX) $(NAME)
+	@gcc $(OBJS) $(MLX_LIB_LINUX) $(LIBFT_A) $(MLXFLAG_LINUX) -o $(NAME)
 # @./$(NAME) ./maps/test_mandatory.cub
 
 $(PATH_OBJS)%.o:	$(PATH_SRCS)%.c
@@ -107,9 +107,9 @@ $(PATH_OBJS)%.o:	$(PATH_SRCS)%.c
 bonus: $(NAME_B)
 
 $(NAME_B): msg_in $(OBJS_B) msg_out
-	@cp $(MLX_LIB_MAC) $(NAME_B)
-	@gcc $(OBJS_B) $(MLX_LIB_MAC) $(LIBFT_A) $(MLXFLAG_MAC) -o $(NAME_B)
-# @./$(NAME_B) ./maps/test.cub
+	@cp $(MLX_LIB_LINUX) $(NAME_B)
+	@gcc $(OBJS_B) $(MLX_LIB_LINUX) $(LIBFT_A) $(MLXFLAG_LINUX) -o $(NAME_B)
+# @./$(NAME_B) ./maps/test_bonus.cub
 
 $(PATH_OBJS_B)%.o:	$(PATH_SRCS_B)%.c
 	@mkdir -p $(PATH_OBJS_B)
@@ -148,7 +148,7 @@ signature:
 	@echo "$G\n\|/~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~\|/"
 	@echo " |             ---------------------------------------------             |"
 	@echo " |             *--*           $LPROJET: CUB_3D$G            *--*             |"
-	@echo " |             *--*      $LPAR: DANTREMB && NADESJAR$G      *--*             |"
+	@echo " |             *--*           $LPAR: dracken24$G            *--*             |"
 	@echo " |             ---------------------------------------------             |"
 	@echo "/|\~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~/|\ \n$W"
 
