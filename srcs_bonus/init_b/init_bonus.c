@@ -79,7 +79,7 @@ void	ft_init_vars2(t_game *game)
 	game->w = SCREENW;
 	game->h = SCREENH;
 	game->move_speed = 0.3;
-	game->rot_speed = 0.015;
+	game->rot_speed = 0.008;
 	game->gun = 1;
 	game->rotate_gun = 1;
 }
